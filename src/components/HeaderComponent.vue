@@ -9,13 +9,13 @@
             li.site-navigation__item
                 a(href="/about.html").site-navigation__link О нас
             li.site-navigation__item
-                a(href="").site-navigation__link Услуги и цены
+                a(href="/prices.html").site-navigation__link Услуги и цены
             li.site-navigation__item
-                a(href="").site-navigation__link Примеры работ
+                a(href="/examples.html").site-navigation__link Примеры работ
             li.site-navigation__item
-                a(href="").site-navigation__link Контакты
+                a(href="#contacts").site-navigation__link Контакты
             li.site-navigation__item
-                a(href="").site-navigation__link Блог
+                a(href="/").site-navigation__link Блог
 </template>
 
 <script>
@@ -76,7 +76,7 @@ export default {
         }
     }
 
-    @media (max-width: 900px) and (min-width: 320px) {
+    @media (max-width: 900px) {
 
         .page-header {
             background-color: transparent;

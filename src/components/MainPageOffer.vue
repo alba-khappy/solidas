@@ -1,8 +1,7 @@
 <template lang="pug">
-
     li.offer__item
         a.offer__link
-            div.offer__heading-wrapper.offer__wrapper--img-1
+            div.offer__heading-wrapper(:class="'offer__wrapper--img-'+index")
                 h3.offer__heading {{heading}}
             p.offer__description {{description}}
 
@@ -12,7 +11,7 @@
     export default {
         name: 'MainPageOffer',
         props: {
-            img: {
+            index: {
                 type: String,
                 required: true,
             },
@@ -48,7 +47,7 @@
 
     .offer__link {
         display: grid;
-        grid-template-columns: 460px auto auto;
+        grid-template-columns: 480px auto auto;
         column-gap: 20px;
 
         &:after {
@@ -70,15 +69,15 @@
         height: 200px;
     }
 
-    .offer__wrapper--img-1 {
+    .offer__wrapper--img-0 {
         background: url("../assets/services-img-desctop-1.png") no-repeat 0;
     }
 
-    .offer__wrapper--img-2 {
+    .offer__wrapper--img-1 {
         background: url("../assets/services-img-desctop-2.png") no-repeat 0;
     }
 
-    .offer__wrapper--img-3 {
+    .offer__wrapper--img-2 {
         background: url("../assets/services-img-desctop-3.png") no-repeat 0;
     }
 

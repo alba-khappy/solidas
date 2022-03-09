@@ -28,7 +28,8 @@
     @import "../assets/scss/general.scss";
 
     .example__img {
-        width: 400px;
+        width: 350px;
+        margin-bottom: 40px;
     }
 
     .example__description {

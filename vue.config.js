@@ -26,6 +26,24 @@ module.exports = {
             // output as dist/index.html
             filename: 'about.html',
             chunks: ['chunk-vendors', 'chunk-common', 'about']
+        },
+        prices: {
+            // entry for the page
+            entry: 'src/pages/prices/main.js',
+            // the source template
+            template: 'public/prices.html',
+            // output as dist/index.html
+            filename: 'prices.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'prices']
+        },
+        examples: {
+            // entry for the page
+            entry: 'src/pages/examples/main.js',
+            // the source template
+            template: 'public/examples.html',
+            // output as dist/index.html
+            filename: 'examples.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'examples']
         }
     }
 };

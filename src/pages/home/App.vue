@@ -11,7 +11,8 @@
                 h2.h2.h2--secondary Services and prices
                 h2.h2.h2--primary.h2__services--primary Услуги и цены
                 ul.offers__list
-                    MainPageOffer(v-for = "offer in offers",
+                    MainPageOffer(v-for = "(offer,index) in offers",
+                        :index = "index",
                         :heading = "offer.heading",
                         :description = "offer.description")
                     li.btn.offer__btn
@@ -30,7 +31,7 @@
                     li.btn.example__btn
                         a(href="/").example__btn-link Смотреть все работы
 
-        section.section-contacts
+        section.section-contacts#contacts
             div.container.contacts__container
                 h2.h2.h2--secondary Contacts
                 h2.h2.h2--primary.h2__contacts--primary Контакты
@@ -63,17 +64,14 @@ export default {
         return {
             offers: [
                 {
-                    //img: require('../assets/services-img-desctop-1.png'),
                     heading: "Лендинг",
                     description: "Дизайн, адаптив, базовое SEO, хостинг…",
                 },
                 {
-                    //img: require('../assets/services-img-desctop-1.png'),
                     heading: "Многостраничный сайт",
                     description: "Сбор требований, дизайн, верстка…",
                 },
                 {
-                    //img: require('../assets/services-img-desctop-1.png'),
                     heading: "Веб сервисы и приложения",
                     description: "Аналитика, архитектура, разработка, тестирование…",
                 },
@@ -82,19 +80,19 @@ export default {
             examples: [
                 {
                     img: "example1.png",
-                    text: "Дизайн мобильного приложения",
-                },
-                {
-                    img: "example2.png",
                     text: "Сайт",
                 },
                 {
-                    img: "example3.png",
-                    text: "Сайт студии косметологии",
+                    img: "example2.png",
+                    text: "Дизайн мобильного приложения",
                 },
                 {
-                    img: "example4.png",
+                    img: "example3.1.png",
                     text: "Сайт онлайн турагненства",
+                },
+                {
+                    img: "example4.1.png",
+                    text: "Сайт студии косметологии",
                 }
             ]
         }
@@ -156,7 +154,7 @@ export default {
         /*examples*/
 
     .section-examples {
-        background: url("../../assets/examples-bg.png") repeat-y;
+        background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: cover;
     }
 
@@ -170,6 +168,7 @@ export default {
         display:grid;
         grid-template-columns: repeat(2, auto);
         justify-content: center;
+        grid-gap: 50px;
     }
 
     .example__btn {
