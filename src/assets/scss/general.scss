@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$blackColorText: #253E46;
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("~@/assets/fonts/NeueMachina-Light.woff") format("woff"),
+  url("~@/assets/fonts/NeueMachina-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  font-weight: 500;
+  src: url("~@/assets/fonts/NeueMachina-Regular.woff") format("woff"),
+  url("~@/assets/fonts/NeueMachina-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  font-weight: 600;
+  src: url("~@/assets/fonts/NeueMachina-Medium.woff") format("woff"),
+  url("~@/assets/fonts/NeueMachina-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SKPrimo";
+  font-weight: 500;
+  src: url("~@/assets/fonts/SKPrimo-Regular.woff") format("woff"),
+  url("~@/assets/fonts/SKPrimo-Regular.woff2") format("woff2");
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: "NeueMachina", sans-serif;
+  color: $blackColorText;
+}
+
+.h2 {
+  font-family: "SKPrimo", serif;
+  grid-area: 1/1/2/2;
+  width: fit-content;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.h2--primary {
+  color: $blackColorText;
+  padding: 25px 0 0 25px;
+  border-bottom: 1px solid rgba(209, 217, 221, 0.5);
+}
+
+.h2--secondary {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 58px;
+  color: rgba(209, 217, 221, 0.5);
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: 1px solid;
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) and (min-width: 320px) {
+
+  .h2 {
+    font-size: 20px;
+  }
+
+}
