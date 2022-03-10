@@ -1,6 +1,6 @@
 <template lang="pug">
     #home
-        HeaderComponent
+        HeaderComponent(:logoLink="logoLink")
         section.section-main
             div.container.main__container
                 img(src="../../assets/logo.svg").main__logo
@@ -15,8 +15,8 @@
                         :index = "index",
                         :heading = "offer.heading",
                         :description = "offer.description")
-                    li.btn.offer__btn
-                        a(href="/").offer__btn-link Сравнить
+                    li.offer__btn
+                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text")
 
         section.section-examples
             div.container.examples__container
@@ -28,8 +28,8 @@
                                     :img = "example.img")
 
                         p.example__description Сайт онлайн турагненства
-                    li.btn.example__btn
-                        a(href="/").example__btn-link Смотреть все работы
+                    li.example__btn
+                        ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text")
 
         section.section-contacts#contacts
             div.container.contacts__container
@@ -57,11 +57,21 @@ import HeaderComponent from '../../components/HeaderComponent'
 import FooterComponent from "../../components/FooterComponent";
 import MainPageOffer from "../../components/MainPageOffer";
 import MainPageExample from "../../components/MainPageExample";
+import ButtonTransparent from "../../components/ButtonStyle";
 
 export default {
     name: 'Home',
     data() {
         return {
+            offersBtn: {
+                address: "/prices.html",
+                text: "Сравнить",
+            },
+            examplesBtn: {
+                address: "/examples.html",
+                text: "Смотреть все работы",
+            },
+            logoLink: false,
             offers: [
                 {
                     heading: "Лендинг",
@@ -98,6 +108,7 @@ export default {
         }
     },
     components: {
+        ButtonTransparent,
         MainPageExample,
         MainPageOffer,
         FooterComponent,
@@ -142,13 +153,7 @@ export default {
     }
 
     .offer__btn {
-        max-width: 200px;
-        border-color: $blackColorText;
-    }
-
-    .offer__btn-link {
-        color: $blackColorText;
-        font-size: 20px;
+        text-align: center;
     }
 
         /*examples*/
@@ -176,6 +181,7 @@ export default {
         min-width: 260px;
         margin-top: 40px;
         margin-bottom: 55px;
+        text-align: center;
     }
 
     .example__btn-link {
@@ -231,9 +237,17 @@ export default {
         border-radius: 5px;
         margin-bottom: 20px;
         padding: 10px 20px;
+        transition: 0.3s;
 
         &::placeholder {
             color: #7E7E7E;
+        }
+
+        &:hover {
+            cursor: pointer;
+            outline: none;
+            border: 1px solid #3A5D65;
+            box-shadow: 0 0 25px -10px rgba(37, 62, 70, 0.3) inset;
         }
     }
 

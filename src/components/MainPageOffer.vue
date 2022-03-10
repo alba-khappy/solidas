@@ -1,6 +1,6 @@
 <template lang="pug">
     li.offer__item
-        a.offer__link
+        a(href="/prices.html").offer__link
             div.offer__heading-wrapper(:class="'offer__wrapper--img-'+index")
                 h3.offer__heading {{heading}}
             p.offer__description {{description}}
@@ -49,6 +49,7 @@
         display: grid;
         grid-template-columns: 480px auto auto;
         column-gap: 20px;
+        color: $blackColorText;
 
         &:after {
             content: '';

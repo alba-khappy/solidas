@@ -1,6 +1,6 @@
 <template lang="pug">
     #prices
-        HeaderComponent
+        HeaderComponent(:logoLink="logoLink")
         section.section__prices-page
             div.container.prices-page__container
                 h2.h2.h2--secondary Services and prices
@@ -15,7 +15,7 @@
                     :cost = "variant.cost",
                     :steps = "variant.steps",
                     :examples = "variant.examples")
-            FooterComponent
+                FooterComponent
 </template>
 
 <script>
@@ -27,22 +27,23 @@
         name: 'Prices',
         data() {
             return {
+                logoLink: true,
                 variants: [
                     {
                         type: "Лендинг",
-                        cost: "От 60 000 руб.",
+                        cost: "От 60 000 р.",
                         steps: "Подбор прототипа, Подбор концепций дизайна, адаптивная верстка, базовое SEO, хостинг",
                         examples: "Сайт-визитка, посадочная страница",
                     },
                     {
                         type: "Многостраничный сайт",
-                        cost: "От 100 000 руб.",
+                        cost: "От 100 000 р.",
                         steps: "Сбор функциональных требований, проработка структуры сайта, подбор дизайна, разработка дизайна типовых страниц, разработка страниц",
                         examples: "Информационный портал, сайт компании",
                     },
                     {
                         type: "Веб приложения и сервисы",
-                        cost: "От 350 000 руб.",
+                        cost: "От 350 000 р.",
                         steps: "Проектирование архитектуры, выбор средств и оценка сроков реализации, поэтапная разработка и тестирование, выпуск в прод.",
                         examples: "Личный кабинет, интерактивный портал, блог",
                     },
@@ -84,22 +85,28 @@
         margin-bottom: 20px;
     }
 
+    @media (max-width: 1100px) {
+        .prices-page__container {
+            padding: 70px 20px 0;
+        }
+    }
 
 
     @media (max-width: 900px) {
 
-        .about-page__container {
+        .prices-page__container {
             background-size: 60%;
             background-position: top center;
         }
 
-        .about-page__container {
-            padding: 70px 20px 0;
-        }
-
-        .h2__about-page--primary {
+        .h2__prices-page--primary {
             margin-bottom: 50px;
         }
+
+        .table-headings {
+            display: none;
+        }
+
     }
 
 

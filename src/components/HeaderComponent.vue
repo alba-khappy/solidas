@@ -1,30 +1,54 @@
 <template lang="pug">
   header.page-header
     nav.main-navigation.container
-        div.burger-menu
-        ul.site-navigation
+        btn.burger-menu(@click="show = !show")
+        ul.site-navigation(:class="{'site-navigation--opacity': !show}")
             li.site-navigation__item
-                a(href="/")
-                    img(src="../assets/logo.svg").site-navigation__logo
-            li.site-navigation__item
-                a(href="/about.html").site-navigation__link О нас
-            li.site-navigation__item
-                a(href="/prices.html").site-navigation__link Услуги и цены
-            li.site-navigation__item
-                a(href="/examples.html").site-navigation__link Примеры работ
-            li.site-navigation__item
-                a(href="#contacts").site-navigation__link Контакты
-            li.site-navigation__item
-                a(href="/").site-navigation__link Блог
+                a(href="/")(v-show="logoLink").site-navigation__link--home-page Главная
+                    img(src="../assets/logo.svg").site-navigation__logo.home-page-link--desktop
+
+            HeaderLink(v-for = "headerLink in headerLinks",
+                    :url = "headerLink.url",
+                    :page = "headerLink.page",)
 </template>
 
 <script>
+import HeaderLink from "./HeaderLink";
 export default {
   name: 'HeaderComponent',
+    components: {
+      HeaderLink
+    },
     props: {
-        logo: {
-            type: String,
+        logoLink: {
+            type: Boolean,
         },
+    },
+    data() {
+        return {
+            show: false,
+            headerLinks: [
+                {
+                    url: "/about.html",
+                    page: "О нас",
+                },
+                {
+                    url: "/prices.html",
+                    page: "Услуги и цены",
+                },
+                {
+                    url: "/examples.html",
+                    page: "Примеры работ",
+                },
+                {
+                    url: "/#contacts",
+                    page: "Контакты",
+                },
+            ]
+        }
+    },
+    methods: {
+
     }
 }
 </script>
@@ -39,10 +63,6 @@ export default {
       color: #F4FDFF;
     }
 
-    .main-navigation {
-
-    }
-
     .burger-menu {
         display: none;
     }
@@ -51,6 +71,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 115px;
     }
 
     .site-navigation__item {
@@ -64,17 +85,14 @@ export default {
         height: 100px;
     }
 
-    .site-navigation__link {
-        color: #F4FDFF;
-        font-size: 20px;
-        border: 1px solid transparent;
-        padding: 5px 10px;
+    /*.home-page-link--desktop {*/
+    /*    display: block;*/
+    /*}*/
 
-        &:hover {
-            border: 1px solid #F4FDFF;
-            border-radius: 5px;
-        }
-    }
+    /*.home-page-link--mobile {*/
+    /*    display: none;*/
+    /*}*/
+
 
     @media (max-width: 900px) {
 
@@ -86,6 +104,14 @@ export default {
             color: $blackColorText;
         }
 
+        .site-navigation--opacity {
+            display: none;
+        }
+
+        .site-navigation__logo {
+            display: none;
+        }
+
         .burger-menu {
             display: block;
             position: absolute;
@@ -95,15 +121,15 @@ export default {
             width: 100px;
             height: 100px;
             z-index: 10;
+            border: none;
         }
 
         .site-navigation {
-            display: none;
+            position: fixed;
             flex-direction: column;
             justify-content: flex-start;
-            padding-left: 100px;
+            height: auto;
             padding-top: 120px;
-            position: absolute;
             left: 0;
             right: 0;
             top: 0;
@@ -114,6 +140,16 @@ export default {
 
         .site-navigation__item {
             margin-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        .site-navigation__link--home-page {
+            cursor: pointer;
+            color: $blackColorText;
+            font-size: 20px;
         }
 
 
