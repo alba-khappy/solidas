@@ -74,6 +74,7 @@ export default {
     .section__about-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: cover;
+        height: 100vh;
     }
 
     .about-page__container {
@@ -81,7 +82,7 @@ export default {
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
         background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
-        background-size: 40%;
+        background-size: 30%;
     }
 
     .h2__about-page--primary {

@@ -16,7 +16,7 @@
                         :heading = "offer.heading",
                         :description = "offer.description")
                     li.offer__btn
-                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text")
+                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text").offer__btn--position
 
         section.section-examples
             div.container.examples__container
@@ -46,8 +46,8 @@
                         input(name="checkbox", type="checkbox").visually-hidden#checkbox
                         label(for="checkbox").contacts__label Согласие на обработку персональных данных
                     button(type="submit").btn.contacts__btn-sent Отправить
-                p.contacts__brief-info Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
-                a(href="/").contacts__brief-link Заполнить бриф
+                p.contacts__brief-info(v-show="brief") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
+                a(href="/").contacts__brief-link(v-show="brief") Заполнить бриф
 
                 FooterComponent
 </template>
@@ -63,6 +63,7 @@ export default {
     name: 'Home',
     data() {
         return {
+            brief: false,
             offersBtn: {
                 address: "/prices.html",
                 text: "Сравнить",
@@ -214,7 +215,8 @@ export default {
 
     .contacts__description {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 30px;
     }
 
@@ -275,6 +277,10 @@ export default {
         background: transparent url("../../assets/checkbox.svg") center no-repeat;
     }
 
+    @keyframes fade {
+         from { opacity: 0; }
+         to { opacity: 1; }
+     }
 
     .contacts__checkbox input:checked + label::after {
         content: "";
@@ -288,7 +294,10 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        animation: fade 0.3s;
     }
+
+
 
     .contacts__btn-sent {
         background-color: transparent;
@@ -449,8 +458,17 @@ export default {
             background-position: -160px, top left;
         }
 
+        .offer__item:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .offer__link {
+            column-gap: 10px;
+        }
+
         .offers__list {
-            padding: 20px 5px;
+            position: relative;
+            padding: 20px 5px 150px;
         }
 
         .offer__heading-wrapper  {
@@ -459,6 +477,10 @@ export default {
 
         .offer__heading {
             padding-left: 100px;
+        }
+
+        .offer__btn--position {
+            bottom: 0;
         }
 
         .example__img {

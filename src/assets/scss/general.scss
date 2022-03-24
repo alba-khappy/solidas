@@ -102,6 +102,15 @@ body {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (max-width: 900px) and (min-width: 320px) {
 
   .h2 {

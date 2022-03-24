@@ -6,13 +6,10 @@
                 h2.h2.h2--secondary Works examples
                 h2.h2.h2--primary.h2__examples-page--primary Примеры работ
                 ExampleOfWork(v-for="exampleItem in exampleList",
-                                :img1="exampleItem.img1",
-                                :img2="exampleItem.img2",
-                                :img3="exampleItem.img3",
-                                :img4="exampleItem.img4",
+                                :workImages="exampleItem.workImages",
                                 :text="exampleItem.text",
                                 :link="exampleItem.link",)
-            FooterComponent
+                FooterComponent
 </template>
 
 <script>
@@ -27,31 +24,40 @@
                 logoLink: true,
                 exampleList: [
                     {
-                        img1: "example1.1.png",
-                        img2: "example1.2.png",
-                        img3: "example1.3.png",
-                        img4: "example1.4.png",
+                        workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],
                         text: "Дизайн мобильного  приложения для аренды автомобилей",
                     },
                     {
-                        img1: "example2.1.png",
-                        img2: "example2.2.png",
-                        img3: "example2.3.png",
-                        img4: "example2.4.png",
+                        workImages: ["example2.1.png", "example2.2.png", "example2.3.png", "example2.4.png"],
                         text: "Приложение для выбора финансовых продуктов",
+                        link: "finbucket.ru",
                     },
                     {
-                        img1: "example3.1.png",
-                        img2: "example3.2.png",
+                        workImages: ["example3.1.png", "example3.2.png", "example3.3.png"],
+                        text: "Сайт онлайн турагенства",
+                        link: "Synny-lucky.ru",
+                    },
+                    {
+                        workImages: ["example4.1.png", "example4.2.png"],
                         text: "Сайт студии косметологии",
                         link: "cosmetology40.ru",
                     },
                     {
-                        img1: "example4.1.png",
-                        img2: "example4.2.png",
-                        text: "Сайт онлайн турагенства",
-                        link: "Synny-lucky.ru",
+                        workImages: ["example5.1.png", "example5.2.png", "example5.3.png"],
+                        text: "Лендинг - портфолио",
                     },
+                    {
+                        workImages: ["example6.1.png", "example6.2.png", "example6.3.png"],
+                        text: "Сайт студии студии красоты",
+                    },
+                    {
+                        workImages: ["example7.1.png", "example7.2.png", "example7.3.png"],
+                        text: "Дизайн лендинга для магазина женского белья",
+                    },
+                    {
+                        workImages: ["example8.1.png", "example8.2.png", "example8.3.png"],
+                        text: "Дизайн сайта юридической компании",
+                    }
                     ]
             }
         },
@@ -67,8 +73,8 @@
     @import "../../assets/scss/general.scss";
 
     .section__examples-page {
-        background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
+        background: url("../../assets/triangular-bg-desktop.png") center repeat;
+        background-size: contain;
     }
 
     .examples-page__container {

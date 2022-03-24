@@ -10,7 +10,6 @@
     export default {
         name: 'FooterComponent',
     }
-
 </script>
 
 
@@ -21,9 +20,18 @@
     .page-footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 70px;
     }
 
     .page-footer__link {
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .page-footer__name, .page-footer__link {
         color: #253E46;
         font-size: 20px;
     }
