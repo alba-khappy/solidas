@@ -1,5 +1,5 @@
 <template lang="pug">
-    div.examples__wrapper
+    div.examples__wrapper(:class="{'examples__wrapper--mobile-images': marginLeft}")
         ul.examples__list
             li.examples__item(v-for="workImage in workImages")
                 img(:src="require(`../assets/${workImage}`)").examples__img
@@ -22,6 +22,9 @@
             },
             link: {
                 type: String,
+            },
+            marginLeft: {
+                type: Boolean,
             }
         }
     }
@@ -39,10 +42,12 @@
         margin-bottom: 50px;
     }
 
+    .examples__wrapper--mobile-images {
+        margin-left: 50px;
+    }
+
     .examples__list {
         display: flex;
-        overflow: hidden;
-        overflow-x: auto;
         margin: 0 auto;
         padding-bottom: 30px;
         justify-content: center;
@@ -50,6 +55,10 @@
 
     .examples__item {
         text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
     }
 
     .examples__work-description {
@@ -68,6 +77,12 @@
 
     .examples__img {
         height: 300px;
+    }
+
+    @media (max-width: 1480px) {
+        .examples__list {
+            justify-content: left;
+        }
     }
 
 </style>

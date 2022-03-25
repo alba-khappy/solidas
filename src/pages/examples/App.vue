@@ -8,7 +8,8 @@
                 ExampleOfWork(v-for="exampleItem in exampleList",
                                 :workImages="exampleItem.workImages",
                                 :text="exampleItem.text",
-                                :link="exampleItem.link",)
+                                :link="exampleItem.link",
+                                :marginLeft="exampleItem.marginLeft")
                 FooterComponent
 </template>
 
@@ -26,37 +27,45 @@
                     {
                         workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],
                         text: "Дизайн мобильного  приложения для аренды автомобилей",
+                        marginLeft: true,
                     },
                     {
                         workImages: ["example2.1.png", "example2.2.png", "example2.3.png", "example2.4.png"],
                         text: "Приложение для выбора финансовых продуктов",
                         link: "finbucket.ru",
+                        marginLeft: true,
                     },
                     {
                         workImages: ["example3.1.png", "example3.2.png", "example3.3.png"],
                         text: "Сайт онлайн турагенства",
                         link: "Synny-lucky.ru",
+                        marginLeft: false,
                     },
                     {
                         workImages: ["example4.1.png", "example4.2.png"],
                         text: "Сайт студии косметологии",
                         link: "cosmetology40.ru",
+                        marginLeft: false,
                     },
                     {
                         workImages: ["example5.1.png", "example5.2.png", "example5.3.png"],
                         text: "Лендинг - портфолио",
+                        marginLeft: false,
                     },
                     {
                         workImages: ["example6.1.png", "example6.2.png", "example6.3.png"],
                         text: "Сайт студии студии красоты",
+                        marginLeft: false,
                     },
                     {
                         workImages: ["example7.1.png", "example7.2.png", "example7.3.png"],
                         text: "Дизайн лендинга для магазина женского белья",
+                        marginLeft: false,
                     },
                     {
                         workImages: ["example8.1.png", "example8.2.png", "example8.3.png"],
                         text: "Дизайн сайта юридической компании",
+                        marginLeft: false,
                     }
                     ]
             }
