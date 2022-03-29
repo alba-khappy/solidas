@@ -1,6 +1,6 @@
 <template lang="pug">
     li.offer__item
-        a(href="/prices.html").offer__link
+        a(:href="offerUrl").offer__link
             div.offer__heading-wrapper(:class="'offer__wrapper--img-'+index")
                 h3.offer__heading {{heading}}
             p.offer__description {{description}}
@@ -12,7 +12,7 @@
         name: 'MainPageOffer',
         props: {
             index: {
-                type: String,
+                type: Number,
                 required: true,
             },
             heading: {
@@ -20,6 +20,10 @@
                 required: true,
             },
             description: {
+                type: String,
+                required: true,
+            },
+            offerUrl: {
                 type: String,
                 required: true,
             },
@@ -47,8 +51,8 @@
 
     .offer__link {
         display: grid;
-        grid-template-columns: 480px auto auto;
-        column-gap: 20px;
+        grid-template-columns: 600px auto auto;
+        column-gap: 10px;
         color: $blackColorText;
 
         &:after {
@@ -66,7 +70,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 200px;
         height: 200px;
     }
 
@@ -86,13 +89,13 @@
         padding-left: 200px;
         font-style: normal;
         font-weight: 500;
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .offer__description {
         position: relative;
-        max-width: 450px;
         align-self: center;
+        text-align: center;
         margin-right: 40px;
         font-weight: normal;
         font-size: 20px;

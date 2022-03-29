@@ -44,6 +44,51 @@ module.exports = {
             // output as dist/index.html
             filename: 'examples.html',
             chunks: ['chunk-vendors', 'chunk-common', 'examples']
+        },
+        landingPage: {
+            // entry for the page
+            entry: 'src/pages/landing-page/main.js',
+            // the source template
+            template: 'public/landing-page.html',
+            // output as dist/index.html
+            filename: 'landing-page.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'landingPage']
+        },
+        multiPage: {
+            // entry for the page
+            entry: 'src/pages/multi-page/main.js',
+            // the source template
+            template: 'public/multi-page.html',
+            // output as dist/index.html
+            filename: 'multi-page.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'multiPage']
+        },
+        webApp: {
+            // entry for the page
+            entry: 'src/pages/web-app/main.js',
+            // the source template
+            template: 'public/web-app.html',
+            // output as dist/index.html
+            filename: 'web-app.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'webApp']
+        },
+        contacts: {
+            // entry for the page
+            entry: 'src/pages/contacts/main.js',
+            // the source template
+            template: 'public/contacts.html',
+            // output as dist/index.html
+            filename: 'contacts.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'contacts']
+        },
+        articlePage: {
+            // entry for the page
+            entry: 'src/pages/article-page/main.js',
+            // the source template
+            template: 'public/article-page.html',
+            // output as dist/index.html
+            filename: 'article-page.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'articlePage']
         }
     }
 };

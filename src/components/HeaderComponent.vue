@@ -44,7 +44,7 @@ export default {
                     page: "Примеры работ",
                 },
                 {
-                    url: "/#contacts",
+                    url: "/contacts.html",
                     page: "Контакты",
                 },
             ]

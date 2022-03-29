@@ -1,7 +1,7 @@
 <template lang="pug">
     footer.page-footer
         p.page-footer__name © Solidas, 2022
-        a(href="").page-footer__mail.page-footer__link boriska01@mail.ru
+        a(href="").page-footer__mail.page-footer__link albinabist1993@mail.ru
         a(href="").page-footer__agreement.page-footer__link Пользовательское соглашение
 
 </template>

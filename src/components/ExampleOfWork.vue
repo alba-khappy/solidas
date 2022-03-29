@@ -5,7 +5,7 @@
                 img(:src="require(`../assets/${workImage}`)").examples__img
 
         p.examples__work-description {{text}}
-        a(href="", v-if="link").examples__work-link {{link}}
+        a(:href="'https://' + link", v-if="link").examples__work-link {{link}}
 
 </template>
 
@@ -40,6 +40,7 @@
         overflow: hidden;
         overflow-x: auto;
         margin-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     .examples__wrapper--mobile-images {

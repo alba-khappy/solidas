@@ -1,15 +1,20 @@
 <template lang="pug">
-    ul.option-parameters__wrapper
-        li.option-parameters__item.option-parameters__item--type {{type}}
-        li.option-parameters__item.option-parameters__item--cost {{cost}}
-        li.option-parameters__item.option-parameters__item--steps {{steps}}
-        li.option-parameters__item.option-parameters__item--examples {{examples}}
+    a(:href="link").option-parameters__link
+        ul.option-parameters__wrapper
+            li.option-parameters__item.option-parameters__item--type {{type}}
+            li.option-parameters__item.option-parameters__item--cost {{cost}}
+            li.option-parameters__item.option-parameters__item--steps {{steps}}
+            li.option-parameters__item.option-parameters__item--examples {{examples}}
 </template>
 
 <script>
     export default {
         name: 'VariantOfWork',
         props: {
+            link: {
+                type: String,
+                required: true,
+            },
             type: {
                 type: String,
                 required: true,
@@ -57,6 +62,10 @@
     .option-parameters__item--type {
         font-weight: bold;
         font-size: 20px;
+    }
+
+    .option-parameters__link {
+        color: $blackColorText;
     }
 
     @media (max-width: 900px) {

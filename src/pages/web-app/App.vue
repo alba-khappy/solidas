@@ -1,18 +1,11 @@
 <template lang="pug">
-    #about
+    #webApp
         HeaderComponent(:logoLink="logoLink")
         section.section__about-page
             div.container.about-page__container
                 h2.h2.h2--secondary About us
                 h2.h2.h2--primary.h2__about-page--primary О нас
-                p.about-page__content Наша команда состоит из разработчиков с опытом работы более 100500лет, все профессионалы высшего класса. И так далее и тому подобное.Технологии, которые мы используем для разработки:
-                ul.about-page__technologies-list
-                    Technologies(v-for = "technologies in technologiesList",
-                        :img1 = "technologies.img1",
-                        :img2 = "technologies.img2",
-                        :img3 = "technologies.img3",
-                    )
-                a(href="/article-page.html").about-page__article Статья о том, как стать разработчиком.
+                p ghghghgh
                 FooterComponent
 </template>
 
@@ -23,7 +16,7 @@ import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
 
 export default {
-  name: 'About',
+  name: 'webApp',
   components: {
       FooterComponent,
       Technologies,
@@ -59,9 +52,9 @@ export default {
                     img3: "mongo.png",
                 },
                 {
-                    img1: "php.png",
-                    img2: "postgress.png",
-                    img3: "mysql.png",
+                    img1: "mysql.png",
+                    img2: "php.png",
+                    img3: "postgress.png",
                 }
             ]
         }
@@ -102,18 +95,6 @@ export default {
         margin-bottom: 300px;
     }
 
-    .about-page__article {
-        color: $blackColorText;
-        margin-bottom: 100px;
-        border-bottom: 1px solid $blackColorText;
-        width: fit-content;
-
-        &:before {
-        content: 'ⓘ';
-        margin-right: 10px;
-        }
-    }
-
     @media (max-width: 900px) {
 
         .about-page__container {
@@ -130,7 +111,7 @@ export default {
         }
 
         .about-page__technologies-list {
-            margin-bottom: 50px;
+            margin-bottom: 150px;
         }
 
     }

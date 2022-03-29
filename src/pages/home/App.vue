@@ -14,7 +14,9 @@
                     MainPageOffer(v-for = "(offer,index) in offers",
                         :index = "index",
                         :heading = "offer.heading",
-                        :description = "offer.description")
+                        :description = "offer.description",
+                        :offerUrl = "offer.offerUrl"
+                        )
                     li.offer__btn
                         ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text").offer__btn--position
 
@@ -26,26 +28,18 @@
                     MainPageExample(v-for = "example in examples",
                                     :text = "example.text",
                                     :img = "example.img")
-
                         p.example__description Сайт онлайн турагненства
                     li.example__btn
                         ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text")
 
-        section.section-contacts#contacts
+        section.section-contacts
             div.container.contacts__container
                 h2.h2.h2--secondary Contacts
                 h2.h2.h2--primary.h2__contacts--primary Контакты
                 div.contacts__description
                     p.contacts__text Остались вопросы?
                     p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время.
-                form.contacts__form
-                    input(type="text", placeholder="Ведите имя").contacts__input
-                    input(type="number", placeholder="Введите номер телефона").contacts__input
-                    input(type="email", placeholder="Введите email").contacts__input
-                    div.contacts__checkbox
-                        input(name="checkbox", type="checkbox").visually-hidden#checkbox
-                        label(for="checkbox").contacts__label Согласие на обработку персональных данных
-                    button(type="submit").btn.contacts__btn-sent Отправить
+                FormComponent
                 p.contacts__brief-info(v-show="brief") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
                 a(href="/").contacts__brief-link(v-show="brief") Заполнить бриф
 
@@ -58,6 +52,7 @@ import FooterComponent from "../../components/FooterComponent";
 import MainPageOffer from "../../components/MainPageOffer";
 import MainPageExample from "../../components/MainPageExample";
 import ButtonTransparent from "../../components/ButtonStyle";
+import FormComponent from "../../components/FormComponent";
 
 export default {
     name: 'Home',
@@ -77,14 +72,17 @@ export default {
                 {
                     heading: "Лендинг",
                     description: "Дизайн, адаптив, базовое SEO, хостинг…",
+                    offerUrl: "/landing-page.html",
                 },
                 {
                     heading: "Многостраничный сайт",
                     description: "Сбор требований, дизайн, верстка…",
+                    offerUrl: "/multiPage.html",
                 },
                 {
                     heading: "Веб сервисы и приложения",
                     description: "Аналитика, архитектура, разработка, тестирование…",
+                    offerUrl: "/webApp.html",
                 },
 
             ],
@@ -109,6 +107,7 @@ export default {
         }
     },
     components: {
+        FormComponent,
         ButtonTransparent,
         MainPageExample,
         MainPageOffer,
@@ -120,6 +119,7 @@ export default {
 
 <style lang="scss">
     @import "../../assets/scss/general.scss";
+
     /*main*/
 
   .section-main {
@@ -220,90 +220,6 @@ export default {
         margin-bottom: 30px;
     }
 
-    .contacts__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: #E5F3FD url("../../assets/contacts-form-bg.png") no-repeat;
-        background-size: contain;
-        padding: 30px 100px;
-        margin: 0 auto 80px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    .contacts__input {
-        width: 220px;
-        height: 50px;
-        background-color: white;
-        border: 1px solid $blackColorText;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        padding: 10px 20px;
-        transition: 0.3s;
-
-        &::placeholder {
-            color: #7E7E7E;
-        }
-
-        &:hover {
-            cursor: pointer;
-            outline: none;
-            border: 1px solid #3A5D65;
-            box-shadow: 0 0 25px -10px rgba(37, 62, 70, 0.3) inset;
-        }
-    }
-
-    .contacts__checkbox {
-        margin-bottom: 20px;
-    }
-
-    .contacts__label {
-        position: relative;
-        display: inline-block;
-        font-size: 14px;
-        line-height: 18px;
-        color: $blackColorText;
-        padding-top: 10px;
-        padding-left: 40px;
-    }
-
-    .contacts__checkbox label::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 5px;
-        width: 27px;
-        height: 27px;
-        background: transparent url("../../assets/checkbox.svg") center no-repeat;
-    }
-
-    @keyframes fade {
-         from { opacity: 0; }
-         to { opacity: 1; }
-     }
-
-    .contacts__checkbox input:checked + label::after {
-        content: "";
-        background-image: url("../../assets/check.svg");
-        color: $blackColorText;
-        position: absolute;
-        left: 6px;
-        top: 7px;
-        width: 24px;
-        height: 16px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        animation: fade 0.3s;
-    }
-
-
-
-    .contacts__btn-sent {
-        background-color: transparent;
-        font-size: 20px;
-    }
-
     .contacts__brief-info {
         text-align: center;
         margin-bottom: 20px;
@@ -399,16 +315,18 @@ export default {
             padding-left: 140px;
         }
 
+        .offer__btn {
+            position: relative;
+        }
+
+        .offer__btn--position {
+            top: 35px;
+        }
+
         /*examples*/
 
         .examples__container {
             padding: 0 20px;
-        }
-
-        /*contacts*/
-
-        .contacts__container {
-            padding: 40px 15px 20px;
         }
 
         .examples__list {
@@ -424,7 +342,13 @@ export default {
         }
 
         .offers__list {
-            padding: 40px 30px;
+            padding: 40px 30px 100px;
+        }
+
+        /*contacts*/
+
+        .contacts__container {
+            padding: 40px 15px 20px;
         }
 
         .contacts__description {
@@ -480,23 +404,21 @@ export default {
         }
 
         .offer__btn--position {
-            bottom: 0;
+            top: 70px;
         }
 
         .example__img {
             width: 250px;
         }
 
-        .contacts__form {
-            padding: 20px 20px;
-        }
-
         .offer__btn-link, .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
             font-size: 16px;
         }
+
+        .contacts__form {
+            padding: 20px 20px;
+        }
     }
-
-
 
 
 </style>

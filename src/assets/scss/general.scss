@@ -122,3 +122,78 @@ body {
   }
 
 }
+
+/*checkbox*/
+
+.wrap {
+  position: relative;
+}
+
+.check-label {
+  position: relative;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+
+.check-sign {
+  position: absolute;
+  background: $blackColorText;
+}
+
+.check-text {
+  position: absolute;
+  top: 0;
+  left: 42px;
+  width: 200px;
+}
+
+#check-part-1 {
+  width: 0;
+  opacity: 0;
+  height: 3px;
+  transform:rotate(45deg);
+  transform-origin: 0 10px;
+  left: -3px;
+  top: 4px;
+}
+
+#check-part-2 {
+  width: 0;
+  height: 3px;
+  transform: rotate(-45deg);
+  left: 13px;
+  top: 10px;
+  opacity: 0;
+  transform-origin: 0 10px;
+}
+
+input#check {
+  display: none;
+}
+
+input#check:checked + .wrap #check-part-2 {
+  opacity: 1;
+  width: 12px;
+  transition: width .2s .2s , opacity .1s .2s;
+}
+
+input#check:checked + .wrap #check-part-1 {
+  opacity: 1;
+  width: 8px;
+  transition: width .2s, opacity .1s;
+}
+
+label {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $blackColorText;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+label:hover {
+  background: #ffffff;
+}
+

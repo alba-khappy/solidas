@@ -11,6 +11,7 @@
                     li.table-headings__item Возможные этапы
                     li.table-headings__item Примеры
                 VariantOfWork(v-for = "variant in variants",
+                    :link = "variant.link",
                     :type = "variant.type",
                     :cost = "variant.cost",
                     :steps = "variant.steps",
@@ -30,18 +31,21 @@
                 logoLink: true,
                 variants: [
                     {
+                        link: "/landing-page.html",
                         type: "Лендинг",
                         cost: "От 60 000 р.",
                         steps: "Подбор прототипа, Подбор концепций дизайна, адаптивная верстка, базовое SEO, хостинг",
                         examples: "Сайт-визитка, посадочная страница",
                     },
                     {
+                        link: "/multi-page.html",
                         type: "Многостраничный сайт",
                         cost: "От 100 000 р.",
                         steps: "Сбор функциональных требований, проработка структуры сайта, подбор дизайна, разработка дизайна типовых страниц, разработка страниц",
                         examples: "Информационный портал, сайт компании",
                     },
                     {
+                        link: "/web-app.html",
                         type: "Веб приложения и сервисы",
                         cost: "От 350 000 р.",
                         steps: "Проектирование архитектуры, выбор средств и оценка сроков реализации, поэтапная разработка и тестирование, выпуск в прод.",
