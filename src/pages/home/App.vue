@@ -4,7 +4,7 @@
         section.section-main
             div.container.main__container
                 img(src="../../assets/logo.svg").main__logo
-                h1.main__heading  Разрабатываем сайты, приложения используя современные технологии.
+                h1.main__heading  Разрабатываем сайты, приложения, используя современные технологии.
 
         section.section-services
             div.container.services__container

@@ -1,5 +1,5 @@
 <template lang="pug">
-    #articlePage
+    #how-to-become-a-developer
         HeaderComponent(:logoLink="logoLink")
         section.section__article-page
             div.container.article-page__container
@@ -37,7 +37,7 @@ import HeaderComponent from "../../components/HeaderComponent";
 import FooterComponent from "../../components/FooterComponent";
 
 export default {
-  name: 'articlePage',
+  name: 'how-to-become-a-developer',
   components: {
       FooterComponent,
       HeaderComponent

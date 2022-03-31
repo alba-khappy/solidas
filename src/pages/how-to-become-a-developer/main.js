@@ -5,4 +5,4 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
-}).$mount('#articlePage');
+}).$mount('#how-to-become-a-developer');

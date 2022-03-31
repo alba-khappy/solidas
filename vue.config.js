@@ -81,14 +81,14 @@ module.exports = {
             filename: 'contacts.html',
             chunks: ['chunk-vendors', 'chunk-common', 'contacts']
         },
-        articlePage: {
+        'how-to-become-a-developer': {
             // entry for the page
-            entry: 'src/pages/article-page/main.js',
+            entry: 'src/pages/how-to-become-a-developer/main.js',
             // the source template
-            template: 'public/article-page.html',
+            template: 'public/how-to-become-a-developer.html',
             // output as dist/index.html
-            filename: 'article-page.html',
-            chunks: ['chunk-vendors', 'chunk-common', 'articlePage']
+            filename: 'how-to-become-a-developer.html',
+            chunks: ['chunk-vendors', 'chunk-common', 'how-to-become-a-developer']
         }
     }
 };

@@ -12,7 +12,7 @@
                         :img2 = "technologies.img2",
                         :img3 = "technologies.img3",
                     )
-                a(href="/article-page.html").about-page__article Статья о том, как стать разработчиком.
+                a(href="/how-to-become-a-developer.html").about-page__article Статья о том, как стать разработчиком.
                 FooterComponent
 </template>
 
