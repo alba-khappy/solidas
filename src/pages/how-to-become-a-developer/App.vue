@@ -136,7 +136,7 @@ export default {
     @media (max-width: 900px) {
 
         .article-page__container {
-            background-size: 45%;
+            background-size: 350px;
             background-position: top center;
         }
 
