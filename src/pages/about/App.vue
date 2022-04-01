@@ -73,8 +73,7 @@ export default {
 
     .section__about-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
-        height: 100vh;
+        background-size: contain;
     }
 
     .about-page__container {
