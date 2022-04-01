@@ -1,6 +1,6 @@
 <template lang="pug">
     #prices
-        HeaderComponent(:logoLink="logoLink")
+        HeaderComponent
         section.section__prices-page
             div.container.prices-page__container
                 h2.h2.h2--secondary Services and prices
@@ -28,7 +28,6 @@
         name: 'Prices',
         data() {
             return {
-                logoLink: true,
                 variants: [
                     {
                         link: "/landing-page.html",

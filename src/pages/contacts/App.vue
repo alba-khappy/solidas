@@ -1,6 +1,6 @@
 <template lang="pug">
     #contacts
-        HeaderComponent(:logoLink="logoLink")
+        HeaderComponent
         section.section__contacts-page
             div.container.contacts-page__container
                 h2.h2.h2--secondary Contacts
@@ -31,7 +31,6 @@ export default {
     data() {
         return {
             brief: false,
-            logoLink: true,
         }
     },
 }

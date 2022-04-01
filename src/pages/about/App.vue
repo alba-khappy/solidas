@@ -1,6 +1,6 @@
 <template lang="pug">
     #about
-        HeaderComponent(:logoLink="logoLink")
+        HeaderComponent
         section.section__about-page
             div.container.about-page__container
                 h2.h2.h2--secondary About us
@@ -31,7 +31,6 @@ export default {
   },
     data() {
         return {
-            logoLink: true,
             technologiesList: [
                 {
                     img1: "html.png",

@@ -1,6 +1,6 @@
 <template lang="pug">
     #examples
-        HeaderComponent(:logoLink="logoLink")
+        HeaderComponent
         section.section__examples-page
             div.container.examples-page__container
                 h2.h2.h2--secondary Works examples
@@ -22,7 +22,6 @@
         name: 'Examples',
         data() {
             return {
-                logoLink: true,
                 exampleList: [
                     {
                         workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],

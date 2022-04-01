@@ -1,6 +1,6 @@
 <template lang="pug">
     #home
-        HeaderComponent(:logoLink="logoLink")
+        HeaderComponent
         section.section-main
             div.container.main__container
                 img(src="../../assets/logo.svg").main__logo
@@ -67,7 +67,6 @@ export default {
                 address: "/examples.html",
                 text: "Смотреть все работы",
             },
-            logoLink: false,
             offers: [
                 {
                     heading: "Лендинг",
@@ -292,36 +291,6 @@ export default {
             padding: 0 15px;
         }
 
-        .offer__heading-wrapper {
-            grid-area: 1/1/3/3;
-            background-size: 130px;
-        }
-
-        .offer__description {
-            grid-area: 2/1/3/3;
-        }
-
-        .offer__link {
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: 180px auto;
-
-            &:after {
-                grid-area: 1/2/3/3;
-            }
-        }
-
-        .offer__heading {
-            font-size: 20px;
-            padding-left: 140px;
-        }
-
-        .offer__btn {
-            position: relative;
-        }
-
-        .offer__btn--position {
-            top: 35px;
-        }
 
         /*examples*/
 
@@ -382,36 +351,11 @@ export default {
             background-position: -160px, top left;
         }
 
-        .offer__item:not(:last-child) {
-            margin-bottom: 0;
-        }
-
-        .offer__link {
-            column-gap: 10px;
-        }
-
-        .offers__list {
-            position: relative;
-            padding: 20px 5px 150px;
-        }
-
-        .offer__heading-wrapper  {
-            background-size: 80px;
-        }
-
-        .offer__heading {
-            padding-left: 100px;
-        }
-
-        .offer__btn--position {
-            top: 70px;
-        }
-
         .example__img {
             width: 250px;
         }
 
-        .offer__btn-link, .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
+        .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
             font-size: 16px;
         }
 

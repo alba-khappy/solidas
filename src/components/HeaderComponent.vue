@@ -7,7 +7,7 @@
             .line
         ul.site-navigation(:class="{'site-navigation--opened': show}")
             li.site-navigation__item
-                a(href="/")(v-show="logoLink").site-navigation__link--home-page Главная
+                a(href="/").site-navigation__link--home-page Главная
                     img(src="../assets/logo-min.svg").site-navigation__logo.home-page-link--desktop
 
             HeaderLink(v-for = "headerLink in headerLinks",
@@ -21,11 +21,6 @@ export default {
   name: 'HeaderComponent',
     components: {
       HeaderLink
-    },
-    props: {
-        logoLink: {
-            type: Boolean,
-        },
     },
     data() {
         return {
@@ -97,7 +92,11 @@ export default {
 
     @media (max-width: 1024px) and (min-width: 901px){
         .site-navigation__item:not(:last-child) {
-            margin-right: 25px;
+            margin-right: 10px;
+        }
+
+        .site-navigation__link {
+            font-size: 18px;
         }
     }
 

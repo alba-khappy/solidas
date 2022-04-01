@@ -155,4 +155,11 @@
 
     }
 
+    @media (max-width: 900px) {
+
+        .site-navigation__link:after {
+            background: transparent;
+        }
+    }
+
 </style>
