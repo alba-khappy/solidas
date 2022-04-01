@@ -1,8 +1,8 @@
 <template lang="pug">
     form.contacts__form
-        input(type="text", placeholder="Введите имя").contacts__input
-        input(type="tel", placeholder="Введите номер телефона").contacts__input
-        input(type="email", placeholder="Введите email").contacts__input
+        input(type="text", placeholder="Введите имя", name="name").contacts__input
+        input(type="tel", placeholder="Введите номер телефона", name="tel").contacts__input
+        input(type="email", placeholder="Введите email", name="email").contacts__input
         label.check-label
             div.check-text Согласие на обработку персональных данных
             input(type='checkbox')#check
