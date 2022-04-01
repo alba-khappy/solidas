@@ -50,15 +50,15 @@ export default {
                 {
                     img1: "nodejs.png",
                     img2: "java.png",
-                    img3: "nginx.png",
+                    img3: "php.png",
                 },
                 {
                     img1: "jenkins.png",
                     img2: "gitlab.png",
-                    img3: "mongo.png",
+                    img3: "nginx.png",
                 },
                 {
-                    img1: "php.png",
+                    img1: "mongo.png",
                     img2: "postgress.png",
                     img3: "mysql.png",
                 }
