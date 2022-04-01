@@ -143,6 +143,10 @@ export default {
             padding: 130px 20px 0;
         }
 
+        .blockquote-style {
+            padding: 60px 50px 45px 90px;
+        }
+
         .h2__article-page--primary {
             margin-bottom: 50px;
         }
