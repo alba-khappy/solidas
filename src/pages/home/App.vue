@@ -41,7 +41,7 @@
                     p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время.
                 FormComponent
                 p.contacts__brief-info(v-show="brief") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
-                a(href="/").contacts__brief-link(v-show="brief") Заполнить бриф
+                span.contacts__brief-link(v-show="brief") Заполнить бриф
 
                 FooterComponent
 </template>
