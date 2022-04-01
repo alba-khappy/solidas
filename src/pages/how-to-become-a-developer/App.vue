@@ -51,9 +51,8 @@ export default {
     @import "../../assets/scss/general.scss";
 
     .section__article-page {
-        background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
-        height: 100vh;
+        background: url("../../assets/triangular-bg-desktop.png") center repeat-y;
+        background-size: contain;
     }
 
     .article-page__container {
