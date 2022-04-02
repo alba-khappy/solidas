@@ -40,8 +40,8 @@
                     p.contacts__text Остались вопросы?
                     p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время.
                 FormComponent
-                p.contacts__brief-info(v-show="brief") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
-                span.contacts__brief-link(v-show="brief") Заполнить бриф
+                p.contacts__brief-info(v-show="false") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
+                span.contacts__brief-link(v-show="false") Заполнить бриф
 
                 FooterComponent
 </template>
@@ -58,7 +58,6 @@ export default {
     name: 'Home',
     data() {
         return {
-            brief: false,
             offersBtn: {
                 address: "/prices.html",
                 text: "Сравнить",
@@ -76,12 +75,12 @@ export default {
                 {
                     heading: "Многостраничный сайт",
                     description: "Сбор требований, дизайн, верстка…",
-                    offerUrl: "/multiPage.html",
+                    offerUrl: "/multi-page.html",
                 },
                 {
                     heading: "Веб сервисы и приложения",
                     description: "Аналитика, архитектура, разработка, тестирование…",
-                    offerUrl: "/webApp.html",
+                    offerUrl: "/web-app.html",
                 },
 
             ],
