@@ -1,14 +1,20 @@
 <template lang="pug">
     footer.page-footer
-        p.page-footer__name © Solidas, 2022
-        a(href="").page-footer__mail.page-footer__link albinabist1993@mail.ru
-        a(href="").page-footer__agreement.page-footer__link Пользовательское соглашение
+        p.page-footer__name © Solidas, {{currentYear}}
+        a(:href="`mailto:${email}&subject=Вопрос с сайта solidas.ru`").page-footer__mail.page-footer__link {{email}}
+        span.page-footer__agreement.page-footer__link Пользовательское соглашение
 
 </template>
 
 <script>
     export default {
         name: 'FooterComponent',
+        data() {
+            return {
+                currentYear: (new Date()).getFullYear(),
+                email: 'welcome@solidas.ru'
+            }
+        }
     }
 </script>
 
