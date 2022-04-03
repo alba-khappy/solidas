@@ -24,38 +24,7 @@ export default {
   },
     data() {
         return {
-            technologiesList: [
-                {
-                    img1: "html.png",
-                    img2: "css.png",
-                    img3: "js.png",
-                },
-                {
-                    img1: "angular.png",
-                    img2: "react.png",
-                    img3: "vue.png",
-                },
-                {
-                    img1: "figma.png",
-                    img2: "photoshop.png",
-                    img3: "illustrator.png",
-                },
-                {
-                    img1: "nodejs.png",
-                    img2: "java.png",
-                    img3: "nginx.png",
-                },
-                {
-                    img1: "jenkins.png",
-                    img2: "gitlab.png",
-                    img3: "mongo.png",
-                },
-                {
-                    img1: "mysql.png",
-                    img2: "php.png",
-                    img3: "postgress.png",
-                }
-            ]
+
         }
     },
 }

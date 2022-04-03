@@ -53,14 +53,14 @@ export default {
                     img3: "php.png",
                 },
                 {
+                    img1: "mongo.png",
+                    img2: "postgres.png",
+                    img3: "mysql.png",
+                },
+                {
                     img1: "jenkins.png",
                     img2: "gitlab.png",
                     img3: "nginx.png",
-                },
-                {
-                    img1: "mongo.png",
-                    img2: "postgress.png",
-                    img3: "mysql.png",
                 }
             ]
         }
