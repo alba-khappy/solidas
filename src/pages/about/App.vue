@@ -23,17 +23,9 @@
                         :img3 = "technologies.img3",
                     )
                 h3.h3--about-page Наше
-                    a(href="")  мнение о нашей профессии.
-                h3.h3--about-page Наши вакансии*
+                    a(href="/how-to-become-a-developer.html")  мнение о нашей профессии.
 
-                //ul
-                    li Angular
-                    li Java
-                    li Взять вакансии и продать резюме на работу?
-
-                //p.about-page__content Наша команда состоит из разработчиков с опытом работы более 100500лет, все профессионалы высшего класса. И так далее и тому подобное.Технологии, которые мы используем для разработки:
-
-                a(href="/how-to-become-a-developer.html").about-page__article Статья о том, как стать разработчиком.
+                a(href="/how-to-become-a-developer.html").about-page__article Наше мнение о нашей профессии.
                 FooterComponent
 </template>
 
