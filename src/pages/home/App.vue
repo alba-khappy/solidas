@@ -159,7 +159,7 @@ export default {
 
     .section-examples {
         background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
+        background-size: contain;
     }
 
     .examples__container {
@@ -310,7 +310,7 @@ export default {
         }
 
         .offers__list {
-            padding: 40px 30px 100px;
+            padding: 0 30px 120px;
         }
 
         /*contacts*/

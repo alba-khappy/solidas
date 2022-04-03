@@ -66,8 +66,8 @@
 
     .section__prices-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
-        height: 100vh;
+        background-size: contain;
+        min-height: 100vh;
     }
 
     .prices-page__container {

@@ -40,8 +40,8 @@ export default {
 
     .section__contacts-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
-        height: 100vh;
+        background-size: contain;
+        min-height: 100vh;
     }
 
     .contacts__text {

@@ -184,7 +184,7 @@ export default {
             }
             .line:nth-child(3) {
                 width: 15px;
-                transform: rotate(-45deg) translate(19px, -11px);
+                transform: rotate(-45deg) translate(19px, -11.5px);
             }
 
         }

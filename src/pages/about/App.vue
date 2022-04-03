@@ -5,13 +5,34 @@
             div.container.about-page__container
                 h2.h2.h2--secondary About us
                 h2.h2.h2--primary.h2__about-page--primary О нас
-                p.about-page__content Наша команда состоит из разработчиков с опытом работы более 100500лет, все профессионалы высшего класса. И так далее и тому подобное.Технологии, которые мы используем для разработки:
+                h3.h3--about-page Наши принципы:
+                ul.about-page--principles-list
+                    li.h3__about-page--principles-item Agile
+                    li.h3__about-page--principles-item Высокое качество продукта
+                    li.h3__about-page--principles-item Индивидуальные дизайн и разработка, нет шаблонам и коробочным решениям, без вордпресса и тильды
+                h3.h3--about-page Наша команда:
+                ul.about-page--team-list
+                    li.h3__about-page--team-item Начала свое формирование в 2019 году;
+                    li.h3__about-page--team-item Участники работали над проектами крупнейших банков, трэвел агентств и маркетплейсов;
+                    li.h3__about-page--team-item Разработчики имеют опыт работы в Европе, США, Японии, Бразилии и других странах мира;
+                h3.h3--about-page Наши технологии:
                 ul.about-page__technologies-list
                     Technologies(v-for = "technologies in technologiesList",
                         :img1 = "technologies.img1",
                         :img2 = "technologies.img2",
                         :img3 = "technologies.img3",
                     )
+                h3.h3--about-page Наше
+                    a(href="")  мнение о нашей профессии.
+                h3.h3--about-page Наши вакансии*
+
+                //ul
+                    li Angular
+                    li Java
+                    li Взять вакансии и продать резюме на работу?
+
+                //p.about-page__content Наша команда состоит из разработчиков с опытом работы более 100500лет, все профессионалы высшего класса. И так далее и тому подобное.Технологии, которые мы используем для разработки:
+
                 a(href="/how-to-become-a-developer.html").about-page__article Статья о том, как стать разработчиком.
                 FooterComponent
 </template>
@@ -74,6 +95,7 @@ export default {
     .section__about-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: contain;
+        min-height: 100vh;
     }
 
     .about-page__container {
@@ -97,7 +119,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 300px;
+        margin-bottom: 100px;
     }
 
     .about-page__article {
@@ -110,6 +132,28 @@ export default {
         content: 'ⓘ';
         margin-right: 10px;
         }
+    }
+
+    .h3--about-page {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .about-page--principles-list, .about-page--team-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .h3__about-page--principles-item {
+        max-width: 300px;
+        font-weight: normal;
+    }
+
+    .h3__about-page--team-item {
+        max-width: 600px;
+        font-weight: normal;
     }
 
     @media (max-width: 900px) {
