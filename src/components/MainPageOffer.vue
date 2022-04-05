@@ -40,6 +40,7 @@
         background: #F0F7F9;
         padding: 40px 110px 65px;
         margin-bottom: 50px;
+        box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
     }
 
     .offer__item {
@@ -148,11 +149,6 @@
             font-weight: 600;
             padding-left: 140px;
         }
-
-    }
-
-    @media (max-width: 900px) {
-
 
     }
 

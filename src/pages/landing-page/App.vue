@@ -1,11 +1,20 @@
 <template lang="pug">
     #landingPage
         HeaderComponent
-        section.section__about-page
-            div.container.about-page__container
-                h2.h2.h2--secondary About us
-                h2.h2.h2--primary.h2__about-page--primary О нас
-                p jfjfjf
+        section.section__landing-page
+            div.container.landing-page__container
+                h2.h2.h2--secondary Landing
+                h2.h2.h2--primary.h2__landing-page--primary Лендинг
+                h3.h3__additional-page Дизайн
+                ul.additional-page__steps-list
+                    development-stage(v-for = "stepOfDesign in stepsOfDesign",
+                    :content = "stepOfDesign")
+
+                h3.h3__additional-page Верстка
+                ul.additional-page__steps-list
+                    development-stage(v-for = "stepOfDev in stepsOfDev",
+                    :content = "stepOfDev")
+
                 FooterComponent
 </template>
 
@@ -14,16 +23,28 @@
 import HeaderComponent from "../../components/HeaderComponent";
 import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
+import DevelopmentStage from "../../components/DevelopmentStage";
 
 export default {
   name: 'landingPage',
   components: {
+      DevelopmentStage,
       FooterComponent,
       Technologies,
       HeaderComponent
   },
     data() {
         return {
+            stepsOfDesign: [
+                            "3 варианта прототипов",
+                            "3 вариантов концепций дизайна (цвета, стили)",
+                            "Разработка логотипа"
+            ],
+            stepsOfDev: [
+                "Предварительный вариант в соответствии с макетами и его тестирование",
+                "Окончательный вариант + check list",
+                "Деплой (Домен, хостинг, метрики)"
+            ],
         }
     },
 }
@@ -32,13 +53,13 @@ export default {
 <style lang="scss">
     @import "../../assets/scss/general.scss";
 
-    .section__about-page {
+    .section__landing-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: cover;
         height: 100vh;
     }
 
-    .about-page__container {
+    .landing-page__container {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
@@ -46,39 +67,20 @@ export default {
         background-size: 30%;
     }
 
-    .h2__about-page--primary {
+    .h2__landing-page--primary {
         margin-bottom: 100px;
-    }
-
-    .about-page__content {
-        font-size: 20px;
-        margin-bottom: 70px;
-    }
-
-    .about-page__technologies-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 300px;
     }
 
     @media (max-width: 900px) {
 
-        .about-page__container {
+        .landing-page__container {
             background-size: 60%;
             background-position: top center;
-        }
-
-        .about-page__container {
             padding: 70px 20px 0;
         }
 
-        .h2__about-page--primary {
+        .h2__landing-page--primary {
             margin-bottom: 50px;
-        }
-
-        .about-page__technologies-list {
-            margin-bottom: 150px;
         }
 
     }

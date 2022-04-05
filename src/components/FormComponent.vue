@@ -39,13 +39,14 @@
     }
 
     .contacts__input {
-        width: 220px;
+        width: 240px;
         height: 50px;
         background-color: white;
         border: 1px solid $blackColorText;
         border-radius: 5px;
         margin-bottom: 20px;
         padding: 10px 20px;
+        font-size: 16px;
         transition: 0.3s;
 
         &::placeholder {

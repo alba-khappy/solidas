@@ -152,7 +152,8 @@ export default {
         }
 
         .h2--article {
-            line-height: 30px;
+            line-height: 25px;
+            max-width: 230px;
         }
 
         .article-page__technologies-list {
