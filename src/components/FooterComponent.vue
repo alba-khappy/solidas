@@ -2,7 +2,7 @@
     footer.page-footer
         p.page-footer__name © Solidas, {{currentYear}}
         a(:href="`mailto:${email}&subject=Вопрос с сайта solidas.ru`").page-footer__mail.page-footer__link {{email}}
-        span.page-footer__agreement.page-footer__link Пользовательское соглашение
+        a(href="").page-footer__agreement.page-footer__link Пользовательское соглашение
 
 </template>
 
@@ -43,11 +43,15 @@
     }
 
     .page-footer__mail {
+        width: fit-content;
+        justify-self: center;
         text-align: center;
     }
 
     .page-footer__agreement {
+        width: min-content;
         text-align: right;
+        justify-self: end;
     }
 
     @media (max-width: 768px) {
@@ -61,6 +65,7 @@
         }
 
         .page-footer__mail {
+            justify-self: end;
             text-align: right;
         }
 

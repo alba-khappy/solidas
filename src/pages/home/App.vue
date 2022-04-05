@@ -14,7 +14,7 @@
                     MainPageOffer(v-for = "(offer,index) in offers",
                         :index = "index",
                         :heading = "offer.heading",
-                        :description = "offer.description",
+                        :price = "offer.price",
                         :offerUrl = "offer.offerUrl"
                         )
                     li.offer__btn
@@ -69,17 +69,17 @@ export default {
             offers: [
                 {
                     heading: "Лендинг",
-                    description: "Дизайн, адаптив, базовое SEO, хостинг…",
+                    price: "От 60 000 руб.",
                     offerUrl: "/landing-page.html",
                 },
                 {
                     heading: "Многостраничный сайт",
-                    description: "Сбор требований, дизайн, верстка…",
+                    price: "От 100 000 руб.",
                     offerUrl: "/multi-page.html",
                 },
                 {
                     heading: "Веб сервисы и приложения",
-                    description: "Аналитика, архитектура, разработка, тестирование…",
+                    price: "От 350 000 руб.",
                     offerUrl: "/web-app.html",
                 },
 
@@ -251,10 +251,6 @@ export default {
             padding: 0 50px;
         }
 
-        .offers__list {
-            padding: 40px 30px;
-        }
-
         .contacts__description {
             flex-direction: column;
         }
@@ -309,10 +305,6 @@ export default {
             padding: 0 15px;
         }
 
-        .offers__list {
-            padding: 0 30px 120px;
-        }
-
         /*contacts*/
 
         .contacts__container {
@@ -339,7 +331,8 @@ export default {
     @media (max-width: 500px) {
 
         .burger-menu {
-            right: 5px;
+            right: 20px;
+            top: 55px
         }
 
         .main__heading {
@@ -347,7 +340,7 @@ export default {
         }
 
         .section-main {
-            background-position: -160px, top left;
+            background-position: -180px, top left;
         }
 
         .example__img {

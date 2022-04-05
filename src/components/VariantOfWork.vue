@@ -73,10 +73,12 @@
         .option-parameters__wrapper {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, auto);
-            row-gap: 40px;
+            row-gap: 0;
 
             &:before {
-                display: none;
+                grid-area: 1/1/2/-1;
+                justify-self: center;
+                transform: rotate(90deg);
             }
         }
 
@@ -86,34 +88,27 @@
 
         .option-parameters__item--type {
             justify-self: center;
-            grid-area: 1/1/2/-1;
+            grid-area: 2/1/3/-1;
             position: relative;
-            padding-left: 30px;
-
-            &:before {
-                content: '';
-                position: absolute;
-                bottom: -20px;
-                left: -20px;
-                background: transparent url("../assets/triangle.png") no-repeat center;
-                width: 40px;
-                height: 60px;
-            }
+            margin-bottom: 30px;
         }
 
         .option-parameters__item--cost {
-            grid-area: 2/1/3/-1;
+            grid-area: 3/1/4/-1;
             justify-self: center;
+            margin-bottom: 30px;
         }
 
         .option-parameters__item--steps {
-            grid-area: 3/1/4/-1;
+            grid-area: 4/1/5/-1;
             justify-self: center;
+            margin-bottom: 30px;
         }
 
         .option-parameters__item--examples {
-            grid-area: 4/1/5/-1;
+            grid-area: 5/1/6/-1;
             justify-self: center;
+            margin-bottom: 30px;
         }
     }
 

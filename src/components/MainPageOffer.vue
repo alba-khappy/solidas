@@ -3,7 +3,7 @@
         a(:href="offerUrl").offer__link
             div.offer__heading-wrapper(:class="'offer__wrapper--img-'+index")
                 h3.offer__heading {{heading}}
-            p.offer__description {{description}}
+            p.offer__price {{price}}
 
 </template>
 
@@ -19,7 +19,7 @@
                 type: String,
                 required: true,
             },
-            description: {
+            price: {
                 type: String,
                 required: true,
             },
@@ -38,7 +38,7 @@
 
     .offers__list {
         background: #F0F7F9;
-        padding: 40px 110px;
+        padding: 40px 110px 65px;
         margin-bottom: 50px;
     }
 
@@ -92,7 +92,7 @@
         font-size: 28px;
     }
 
-    .offer__description {
+    .offer__price {
         position: relative;
         align-self: center;
         text-align: center;
@@ -101,7 +101,7 @@
         font-size: 20px;
     }
 
-    @media (max-width: 1324px) and (min-width: 901px) {
+    @media (max-width: 1340px) and (min-width: 901px) {
         .offer__link {
             display: grid;
             grid-template-columns: 450px auto auto;
@@ -113,15 +113,24 @@
         }
     }
 
-    @media (max-width: 900px) and (min-width: 320px) {
+    @media (max-width: 1024px) {
 
         .offer__heading-wrapper {
             grid-area: 1/1/3/3;
             background-size: 130px;
         }
 
-        .offer__description {
+        .offer__price {
             grid-area: 2/1/3/3;
+            margin-right: 0;
+        }
+
+        .offer__btn {
+            position: relative;
+        }
+
+        .offer__btn--position {
+            top: 35px;
         }
 
         .offer__link {
@@ -130,7 +139,7 @@
 
             &:after {
                 grid-area: 1/2/3/3;
-                align-self: end;
+                align-self: center;
             }
         }
 
@@ -140,12 +149,17 @@
             padding-left: 140px;
         }
 
-        .offer__btn {
-            position: relative;
-        }
+    }
 
-        .offer__btn--position {
-            top: 35px;
+    @media (max-width: 900px) {
+
+
+    }
+
+    @media (max-width: 900px) and (min-width: 501px) {
+
+        .offers__list {
+            padding: 0 30px 90px;
         }
     }
 
@@ -156,20 +170,23 @@
         }
 
         .offer__link {
+            grid-template-rows: repeat(2, auto);
             column-gap: 10px;
         }
 
         .offers__list {
             position: relative;
-            padding: 20px 5px 150px;
+            padding: 20px 10px 112px 5px;
         }
 
         .offer__heading-wrapper  {
-            background-size: 80px;
+            height: 150px;
+            background-size: 60px;
         }
 
         .offer__heading {
-            padding-left: 100px;
+            padding-left:70px;
+            font-size: 18px;
         }
 
         .offer__btn--position {

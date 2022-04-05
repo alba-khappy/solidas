@@ -174,13 +174,13 @@ input#check {
 input#check:checked + .wrap #check-part-2 {
   opacity: 1;
   width: 12px;
-  transition: width .2s .2s , opacity .1s .2s;
+  transition: width .1s .1s , opacity .05s .1s;
 }
 
 input#check:checked + .wrap #check-part-1 {
   opacity: 1;
   width: 8px;
-  transition: width .2s, opacity .1s;
+  transition: width .1s, opacity .05s;
 }
 
 label {
@@ -190,7 +190,7 @@ label {
   border-radius: 5px;
   display: block;
   cursor: pointer;
-  transition: background .2s;
+  transition: background .1s;
 }
 
 label:hover {
