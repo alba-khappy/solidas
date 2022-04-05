@@ -3,9 +3,9 @@
         ul.examples__list
             li.examples__item(v-for="workImage in workImages")
                 img(:src="require(`../assets/${workImage}`)").examples__img
-
-        p.examples__work-description {{text}}
-        a(:href="'https://' + link", v-if="link").examples__work-link {{link}}
+        div.examples__work-description-wrapper
+            p.examples__work-description {{text}}
+            a(:href="'https://' + link", v-if="link").examples__work-link {{link}}
 
 </template>
 
@@ -39,12 +39,11 @@
     .examples__wrapper {
         overflow: hidden;
         overflow-x: auto;
-        margin-bottom: 50px;
-        padding-bottom: 30px;
+        margin-bottom: 80px;
     }
 
     .examples__wrapper--mobile-images {
-        margin-left: 50px;
+        margin-left: 20px;
     }
 
     .examples__list {
@@ -62,18 +61,21 @@
         }
     }
 
+    .examples__work-description-wrapper {
+        position: absolute;
+    }
+
     .examples__work-description {
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
 
     .examples__work-link {
         display: block;
         width: fit-content;
-        text-align: center;
+        text-align: left;
         color: $blackColorText;
         border-bottom: 1px solid $blackColorText;
-        margin: 0 auto;
     }
 
     .examples__img {

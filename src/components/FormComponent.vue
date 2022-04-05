@@ -67,4 +67,15 @@
         font-size: 20px;
     }
 
+    @media (max-width: 900px) {
+
+        .contacts__form {
+            padding: 30px;
+        }
+
+        .check-text {
+            left: 25px;
+        }
+    }
+
 </style>

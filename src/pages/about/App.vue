@@ -21,11 +21,13 @@
                         :img1 = "technologies.img1",
                         :img2 = "technologies.img2",
                         :img3 = "technologies.img3",
+                        :alt1 = "technologies.alt1",
+                        :alt2 = "technologies.alt2",
+                        :alt3 = "technologies.alt3",
                     )
-                h3.h3--about-page Наше
-                    a(href="/how-to-become-a-developer.html")  мнение о нашей профессии.
+                p.about-page__article Наше
+                    a(href="/how-to-become-a-developer.html").about-page__article-link  мнение о нашей профессии.
 
-                a(href="/how-to-become-a-developer.html").about-page__article Наше мнение о нашей профессии.
                 FooterComponent
 </template>
 
@@ -49,31 +51,49 @@ export default {
                     img1: "html.png",
                     img2: "css.png",
                     img3: "js.png",
+                    alt1: "html",
+                    alt2: "css",
+                    alt3: "js",
                 },
                 {
                     img1: "angular.png",
                     img2: "react.png",
                     img3: "vue.png",
+                    alt1: "angular",
+                    alt2: "react",
+                    alt3: "vue",
                 },
                 {
                     img1: "figma.png",
                     img2: "photoshop.png",
                     img3: "illustrator.png",
+                    alt1: "figma",
+                    alt2: "photoshop",
+                    alt3: "illustrator",
                 },
                 {
                     img1: "nodejs.png",
                     img2: "java.png",
                     img3: "php.png",
+                    alt1: "nodejs",
+                    alt2: "java",
+                    alt3: "php",
                 },
                 {
                     img1: "mongo.png",
                     img2: "postgres.png",
                     img3: "mysql.png",
+                    alt1: "mongo",
+                    alt2: "postgres",
+                    alt3: "mysql",
                 },
                 {
                     img1: "jenkins.png",
                     img2: "gitlab.png",
                     img3: "nginx.png",
+                    alt1: "jenkins",
+                    alt2: "gitlab",
+                    alt3: "nginx",
                 }
             ]
         }
@@ -83,6 +103,23 @@ export default {
 
 <style lang="scss">
     @import "../../assets/scss/general.scss";
+
+    @mixin aboutListItem {
+        position: relative;
+        font-weight: normal;
+        margin-bottom: 30px;
+        padding-left: 30px;
+
+        &:before {
+            content: '';
+            background: transparent url("../../assets/about-check.svg") no-repeat center;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-size: contain;
+            left: 0;
+        }
+    }
 
     .section__about-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
@@ -114,18 +151,6 @@ export default {
         margin-bottom: 100px;
     }
 
-    .about-page__article {
-        color: $blackColorText;
-        margin-bottom: 100px;
-        border-bottom: 1px solid $blackColorText;
-        width: fit-content;
-
-        &:before {
-        content: 'ⓘ';
-        margin-right: 10px;
-        }
-    }
-
     .h3--about-page {
         font-size: 20px;
         margin-bottom: 30px;
@@ -133,19 +158,30 @@ export default {
 
     .about-page--principles-list, .about-page--team-list {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
+        flex-direction: column;
         margin-bottom: 40px;
     }
 
     .h3__about-page--principles-item {
-        max-width: 300px;
-        font-weight: normal;
+        @include aboutListItem;
     }
 
     .h3__about-page--team-item {
-        max-width: 600px;
-        font-weight: normal;
+        @include aboutListItem;
+    }
+
+    .about-page__article {
+        margin-bottom: 30px;
+
+        &:before {
+            content: 'ⓘ';
+            margin-right: 5px;
+        }
+    }
+
+    .about-page__article-link {
+        color: $blackColorText;
+        border-bottom: 1px solid $blackColorText;
     }
 
     @media (max-width: 900px) {

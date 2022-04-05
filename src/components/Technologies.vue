@@ -1,8 +1,8 @@
 <template lang="pug">
     li.technologies-item
-        img(:src="require(`../assets/${img1}`)")
-        img(:src="require(`../assets/${img2}`)")
-        img(:src="require(`../assets/${img3}`)")
+        img(:src="require(`../assets/${img1}`)", :alt="alt1", :title="alt1")
+        img(:src="require(`../assets/${img2}`)", :alt="alt2", :title="alt2")
+        img(:src="require(`../assets/${img3}`)", :alt="alt3", :title="alt3")
 </template>
 
 <script>
@@ -21,6 +21,18 @@
                 type: String,
                 required: true,
             },
+            alt1: {
+                type: String,
+                required: true,
+            },
+            alt2: {
+                type: String,
+                required: true,
+            },
+            alt3: {
+                type: String,
+                required: true,
+            }
         }
     }
 </script>
