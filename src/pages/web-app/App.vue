@@ -8,7 +8,7 @@
                 ul.additional-page__steps-list
                     development-stage(v-for = "step in steps",
                         :content = "step")
-            FooterComponent
+                FooterComponent
 </template>
 
 <script>
@@ -67,7 +67,7 @@ export default {
     @media (max-width: 900px) {
 
         .web-app-page__container {
-            background-size: 60%;
+            background-size: 40%;
             background-position: top center;
         }
 
@@ -79,6 +79,14 @@ export default {
             margin-bottom: 50px;
         }
 
+    }
+
+    @media (max-width: 500px) {
+
+        .web-app-page__container {
+            background-size: 60%;
+            background-position: top center;
+        }
     }
 
 

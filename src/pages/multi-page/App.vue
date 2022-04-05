@@ -9,7 +9,7 @@
                     development-stage(v-for = "step in steps",
                         :content = "step")
 
-            FooterComponent
+                FooterComponent
 </template>
 
 <script>
@@ -64,11 +64,8 @@ export default {
     @media (max-width: 900px) {
 
         .multi-page__container {
-            background-size: 60%;
+            background-size: 40%;
             background-position: top center;
-        }
-
-        .multi-page__container {
             padding: 70px 20px 0;
         }
 
@@ -77,6 +74,15 @@ export default {
         }
 
     }
+
+    @media (max-width: 500px) {
+
+        .multi-page__container {
+            background-size: 60%;
+            padding: 100px 20px 0;
+        }
+    }
+
 
 
 

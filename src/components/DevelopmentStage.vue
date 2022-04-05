@@ -25,6 +25,7 @@
         width: 280px;
         height: 130px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 10px 20px;
