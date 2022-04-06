@@ -55,6 +55,7 @@
         grid-template-columns: 600px auto auto;
         column-gap: 10px;
         color: $blackColorText;
+        transition: 0.3s;
 
         &:after {
             content: '';
@@ -64,7 +65,17 @@
             height: 20px;
             background: url("../assets/services-more-info.svg") no-repeat;
             background-size: contain;
+            transition: 0.3s;
         }
+
+        &:hover .offer__heading, &:hover .offer__price, .offer__link:after{
+            transform: scale(1.05);
+        }
+    }
+
+    .offer__link:hover:after {
+        width: 30px;
+        height: 30px;
     }
 
     .offer__heading-wrapper {
@@ -91,6 +102,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 28px;
+        transition: 0.3s;
     }
 
     .offer__price {
@@ -100,6 +112,7 @@
         margin-right: 40px;
         font-weight: normal;
         font-size: 20px;
+        transition: 0.3s;
     }
 
     @media (max-width: 1340px) and (min-width: 901px) {
@@ -134,6 +147,10 @@
             top: 35px;
         }
 
+        .offers__list {
+            padding: 0 30px 90px;
+        }
+
         .offer__link {
             grid-template-columns: repeat(2, auto);
             grid-template-rows: 180px auto;
@@ -149,21 +166,9 @@
             font-weight: 600;
             padding-left: 140px;
         }
-
-    }
-
-    @media (max-width: 900px) and (min-width: 501px) {
-
-        .offers__list {
-            padding: 0 30px 90px;
-        }
     }
 
     @media (max-width: 500px) {
-
-        .offer__item:not(:last-child) {
-            margin-bottom: 0;
-        }
 
         .offer__link {
             grid-template-rows: repeat(2, auto);
@@ -172,11 +177,11 @@
 
         .offers__list {
             position: relative;
-            padding: 20px 10px 112px 5px;
+            padding: 20px 10px 110px 5px;
         }
 
         .offer__heading-wrapper  {
-            height: 150px;
+            height: 120px;
             background-size: 60px;
         }
 

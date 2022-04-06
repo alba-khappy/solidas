@@ -5,17 +5,17 @@
             div.container.about-page__container
                 h2.h2.h2--secondary About us
                 h2.h2.h2--primary.h2__about-page--primary О нас
-                h3.h3--about-page Наши принципы:
+                h3.h3--about-page Наши принципы
                 ul.about-page--principles-list
                     li.h3__about-page--principles-item Agile
                     li.h3__about-page--principles-item Высокое качество продукта
                     li.h3__about-page--principles-item Индивидуальные дизайн и разработка, нет шаблонам и коробочным решениям, без вордпресса и тильды
-                h3.h3--about-page Наша команда:
+                h3.h3--about-page Наша команда
                 ul.about-page--team-list
                     li.h3__about-page--team-item Начала свое формирование в 2019 году;
                     li.h3__about-page--team-item Участники работали над проектами крупнейших банков, трэвел агентств и маркетплейсов;
                     li.h3__about-page--team-item Разработчики имеют опыт работы в Европе, США, Японии, Бразилии и других странах мира;
-                h3.h3--about-page Наши технологии:
+                h3.h3--about-page Наши технологии
                 ul.about-page__technologies-list
                     Technologies(v-for = "technologies in technologiesList",
                         :img1 = "technologies.img1",

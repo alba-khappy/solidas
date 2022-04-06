@@ -5,12 +5,11 @@
 
 <script>
     export default {
-        name: 'DevelopmentStage',
+        name: 'DevelopmentConditions',
         props: {
             content: {
                 type: String,
             },
-
         },
     }
 

@@ -53,7 +53,7 @@ export default {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/contacts-header-bg.png") no-repeat top right;
         background-size: 30%;
     }
 

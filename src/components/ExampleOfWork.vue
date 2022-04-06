@@ -88,4 +88,14 @@
         }
     }
 
+    @media (max-width: 1480px) {
+        .examples__wrapper {
+            margin-bottom: 80px;
+        }
+
+        .examples-page__container {
+            row-gap: 30px;
+        }
+    }
+
 </style>

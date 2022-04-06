@@ -7,13 +7,17 @@
                 h2.h2.h2--primary.h2__landing-page--primary Лендинг
                 h3.h3__additional-page Дизайн
                 ul.additional-page__steps-list
-                    development-stage(v-for = "stepOfDesign in stepsOfDesign",
+                    development-conditions(v-for = "stepOfDesign in stepsOfDesign",
                     :content = "stepOfDesign")
 
                 h3.h3__additional-page Верстка
                 ul.additional-page__steps-list
-                    development-stage(v-for = "stepOfDev in stepsOfDev",
+                    development-conditions(v-for = "stepOfDev in stepsOfDev",
                     :content = "stepOfDev")
+                h3.h3__additional-page Примеры
+                ul.additional-page__steps-list
+                    development-conditions(v-for = "example in examples",
+                    :content = "example")
 
                 FooterComponent
 </template>
@@ -21,16 +25,15 @@
 <script>
 
 import HeaderComponent from "../../components/HeaderComponent";
-import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
-import DevelopmentStage from "../../components/DevelopmentStage";
+import DevelopmentConditions from "../../components/DevelopmentСonditions";
+
 
 export default {
   name: 'landingPage',
   components: {
-      DevelopmentStage,
+      DevelopmentConditions,
       FooterComponent,
-      Technologies,
       HeaderComponent
   },
     data() {
@@ -45,6 +48,10 @@ export default {
                 "Окончательный вариант + check list",
                 "Деплой (Домен, хостинг, метрики)"
             ],
+            examples: [
+                "Посадочная страница",
+                "Сайт-визитка",
+            ],
         }
     },
 }
@@ -55,15 +62,14 @@ export default {
 
     .section__landing-page {
         background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: cover;
-        height: 100vh;
+        background-size: contain;
     }
 
     .landing-page__container {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/landing-page-header-bg.png") no-repeat top right;
         background-size: 30%;
     }
 

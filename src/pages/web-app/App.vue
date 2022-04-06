@@ -4,10 +4,15 @@
         section.section__web-app-page
             div.container.web-app-page__container
                 h2.h2.h2--secondary Web application
-                h2.h2.h2--primary.h2__web-app-page--primary Веб приложение (сервис)
+                h2.h2.h2--primary.h2__web-app-page--primary Веб приложение
                 ul.additional-page__steps-list
-                    development-stage(v-for = "step in steps",
+                    development-conditions(v-for = "step in steps",
                         :content = "step")
+                h3.h3__additional-page Примеры
+                ul.additional-page__steps-list
+                    development-conditions(v-for = "example in examples",
+                    :content = "example")
+
                 FooterComponent
 </template>
 
@@ -16,12 +21,13 @@
 import HeaderComponent from "../../components/HeaderComponent";
 import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
-import DevelopmentStage from "../../components/DevelopmentStage";
+import DevelopmentConditions from "../../components/DevelopmentСonditions";
+
 
 export default {
   name: 'webApp',
   components: {
-      DevelopmentStage,
+      DevelopmentConditions,
       FooterComponent,
       Technologies,
       HeaderComponent
@@ -36,6 +42,13 @@ export default {
                 "Тестирование",
                 "Установка в продуктивную среду",
                 "Прием заказчиком и передача на поддержку",
+            ],
+            examples: [
+                "Личный кабинет",
+                "Блог",
+                "Соцсети",
+                "Интернет магазин",
+                "Автоматизация",
             ],
         }
     },
@@ -55,7 +68,7 @@ export default {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/web-app-page-header-bg.png") no-repeat top right;
         background-size: 30%;
     }
 

@@ -1,7 +1,7 @@
 <template lang="pug">
     footer.page-footer
         p.page-footer__name © Solidas, {{currentYear}}
-        a(:href="`mailto:${email}&subject=Вопрос с сайта solidas.ru`").page-footer__mail.page-footer__link {{email}}
+        a(:href="`mailto:${email}?subject=Вопрос с сайта solidas.ru`").page-footer__mail.page-footer__link {{email}}
         a(href="").page-footer__agreement.page-footer__link Пользовательское соглашение
 
 </template>

@@ -5,7 +5,7 @@
             div.container.examples-page__container
                 h2.h2.h2--secondary Works examples
                 h2.h2.h2--primary.h2__examples-page--primary Примеры работ
-                ExampleOfWork(v-for="exampleItem in exampleList",
+                example-of-work(v-for="exampleItem in exampleList",
                                 :workImages="exampleItem.workImages",
                                 :text="exampleItem.text",
                                 :link="exampleItem.link",
@@ -100,7 +100,7 @@
     @media (max-width: 900px) {
 
         .examples-page__container {
-            background-size: 60%;
+            background-size: 50%;
             background-position: top center;
         }
 
@@ -109,9 +109,10 @@
         }
 
         .h2__examples-page--primary {
-            margin-bottom: 50px;
+            margin-bottom: 0;
         }
     }
+
 
 
 </style>

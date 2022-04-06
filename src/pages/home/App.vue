@@ -308,7 +308,7 @@ export default {
         /*contacts*/
 
         .contacts__container {
-            padding: 40px 15px 20px;
+            padding: 40px 5px 20px;
         }
 
         .contacts__description {
@@ -352,6 +352,7 @@ export default {
         }
 
         .contacts__form {
+            min-width: 310px;
             padding: 20px 20px;
         }
     }

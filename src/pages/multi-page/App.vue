@@ -6,8 +6,13 @@
                 h2.h2.h2--secondary Multipage app
                 h2.h2.h2--primary.h2__multi-page--primary Многостраничный сайт
                 ul.additional-page__steps-list
-                    development-stage(v-for = "step in steps",
+                    development-conditions(v-for = "step in steps",
                         :content = "step")
+                h3.h3__additional-page Примеры
+                ul.additional-page__steps-list
+                    development-conditions(v-for = "example in examples",
+                    :content = "example")
+
 
                 FooterComponent
 </template>
@@ -17,12 +22,13 @@
 import HeaderComponent from "../../components/HeaderComponent";
 import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
-import DevelopmentStage from "../../components/DevelopmentStage";
+import DevelopmentConditions from "../../components/DevelopmentСonditions";
+
 
 export default {
   name: 'multiPage',
   components: {
-      DevelopmentStage,
+      DevelopmentConditions,
       FooterComponent,
       Technologies,
       HeaderComponent
@@ -33,6 +39,10 @@ export default {
                 "Аналитика: сбор требований, проработка структуры сайта, проработка функциональных требований",
                 "Создание дизайна, разработка дизайна типовых страниц",
                 "Верстка и программирование страниц",
+            ],
+            examples: [
+                "Информационный портал",
+                "Сайт компании",
             ],
         }
     },
@@ -52,7 +62,7 @@ export default {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/multi-page-header-bg.png") no-repeat top right;
         background-size: 30%;
     }
 
