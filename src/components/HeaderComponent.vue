@@ -17,6 +17,7 @@
 
 <script>
 import HeaderLink from "./HeaderLink";
+
 export default {
   name: 'HeaderComponent',
     components: {
@@ -54,7 +55,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
     @import "../assets/scss/general.scss";
@@ -186,7 +186,6 @@ export default {
                 width: 15px;
                 transform: rotate(-45deg) translate(19px, -11.5px);
             }
-
         }
 
         .line {
@@ -204,9 +203,6 @@ export default {
                 width: 13px;
             }
         }
-
-
-
     }
 
 </style>

@@ -22,7 +22,6 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
     @import "../assets/scss/general.scss";
@@ -62,7 +61,6 @@
                     left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
             transform-origin: left;
         }
-
     }
 
     .line {
@@ -152,7 +150,6 @@
                 transform-origin: left;
             }
         }
-
     }
 
     @media (max-width: 900px) {

@@ -4,7 +4,6 @@
             div.offer__heading-wrapper(:class="'offer__wrapper--img-'+index")
                 h3.offer__heading {{heading}}
             p.offer__price {{price}}
-
 </template>
 
 <script>

@@ -78,6 +78,7 @@
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     .section__examples-page {
@@ -112,7 +113,4 @@
             margin-bottom: 0;
         }
     }
-
-
-
 </style>

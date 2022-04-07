@@ -43,6 +43,7 @@
     .button-transparent:hover {
         color: #fff;
     }
+
     .button-transparent span {
         position: absolute;
         width: 100%;
@@ -51,6 +52,7 @@
         transition: 0.5s;
         z-index: -1;
     }
+
     .button-transparent span:nth-child(1) {
         top: -100%;
         left: -100%;
@@ -59,18 +61,22 @@
         top: 0;
         left: 0;
     }
+
     .button-transparent span:nth-child(2) {
         bottom: -100%;
         left: -100%;
     }
+
     .button-transparent:hover span:nth-child(2) {
         bottom: 0;
         left: 0;
     }
+
     .button-transparent span:nth-child(3) {
         top: -100%;
         right: -100%;
     }
+
     .button-transparent:hover span:nth-child(3) {
         top: 0;
         right: 0;
@@ -79,6 +85,7 @@
         bottom: -100%;
         right: -100%;
     }
+
     .button-transparent:hover span:nth-child(4) {
         bottom: 0;
         right: 0;

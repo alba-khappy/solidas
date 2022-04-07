@@ -9,7 +9,6 @@
                 ul.additional-page__steps-list
                     development-conditions(v-for = "stepOfDesign in stepsOfDesign",
                     :content = "stepOfDesign")
-
                 h3.h3__additional-page Верстка
                 ul.additional-page__steps-list
                     development-conditions(v-for = "stepOfDev in stepsOfDev",
@@ -66,6 +65,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
         .section__landing-page {
@@ -98,9 +98,5 @@ export default {
             }
 
         }
-
-
-
-
 
 </style>

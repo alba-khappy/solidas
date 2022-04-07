@@ -1,9 +1,7 @@
 <template lang="pug">
-
     li
         img(:src="require(`../assets/${img}`)").example__img
         p.example__description {{text}}
-
 </template>
 
 <script>
@@ -21,7 +19,6 @@
         }
     }
 </script>
-
 
 <style lang="scss">
 

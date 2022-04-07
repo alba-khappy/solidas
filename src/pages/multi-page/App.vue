@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     .section__multi-page {
@@ -76,7 +77,6 @@ export default {
     .h2__multi-page--primary {
         margin-bottom: 100px;
     }
-
 
     @media (max-width: 900px) {
 
@@ -99,9 +99,5 @@ export default {
             padding: 100px 20px 0;
         }
     }
-
-
-
-
 
 </style>

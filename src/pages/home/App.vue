@@ -16,7 +16,7 @@
                         :heading = "offer.heading",
                         :price = "offer.price",
                         :offerUrl = "offer.offerUrl"
-                        )
+                    )
                     li.offer__btn
                         ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text").section-services__btn-order--position
 
@@ -26,8 +26,8 @@
                 h2.h2.h2--primary.h2__services--primary Примеры работ
                 ul.examples__list
                     MainPageExample(v-for = "example in examples",
-                                    :text = "example.text",
-                                    :img = "example.img")
+                        :text = "example.text",
+                        :img = "example.img")
                         p.example__description Сайт онлайн турагненства
                     li.example__btn
                         ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text").section-examples__btn-order--position
@@ -47,97 +47,98 @@
 </template>
 
 <script>
-import HeaderComponent from '../../components/HeaderComponent'
-import FooterComponent from "../../components/FooterComponent";
-import MainPageOffer from "../../components/MainPageOffer";
-import MainPageExample from "../../components/MainPageExample";
-import ButtonTransparent from "../../components/ButtonStyle";
-import FormComponent from "../../components/FormComponent";
+    import HeaderComponent from '../../components/HeaderComponent'
+    import FooterComponent from "../../components/FooterComponent";
+    import MainPageOffer from "../../components/MainPageOffer";
+    import MainPageExample from "../../components/MainPageExample";
+    import ButtonTransparent from "../../components/ButtonStyle";
+    import FormComponent from "../../components/FormComponent";
 
-export default {
-    name: 'Home',
-    data() {
-        return {
-            offersBtn: {
-                address: "/prices.html",
-                text: "Сравнить",
-            },
-            examplesBtn: {
-                address: "/examples.html",
-                text: "Смотреть все работы",
-            },
-            offers: [
-                {
-                    heading: "Лендинг",
-                    price: "От 60 000 руб.",
-                    offerUrl: "/landing-page.html",
+    export default {
+        name: 'Home',
+        data() {
+            return {
+                offersBtn: {
+                    address: "/prices.html",
+                    text: "Сравнить",
                 },
-                {
-                    heading: "Многостраничный сайт",
-                    price: "От 100 000 руб.",
-                    offerUrl: "/multi-page.html",
+                examplesBtn: {
+                    address: "/examples.html",
+                    text: "Смотреть все работы",
                 },
-                {
-                    heading: "Веб сервисы и приложения",
-                    price: "От 350 000 руб.",
-                    offerUrl: "/web-app.html",
-                },
+                offers: [
+                    {
+                        heading: "Лендинг",
+                        price: "От 60 000 руб.",
+                        offerUrl: "/landing-page.html",
+                    },
+                    {
+                        heading: "Многостраничный сайт",
+                        price: "От 100 000 руб.",
+                        offerUrl: "/multi-page.html",
+                    },
+                    {
+                        heading: "Веб сервисы и приложения",
+                        price: "От 350 000 руб.",
+                        offerUrl: "/web-app.html",
+                    },
 
-            ],
-            examples: [
-                {
-                    img: "example1.png",
-                    text: "Сайт",
-                },
-                {
-                    img: "example2.png",
-                    text: "Дизайн мобильного приложения",
-                },
-                {
-                    img: "example3.1.png",
-                    text: "Сайт онлайн турагненства",
-                },
-                {
-                    img: "example4.1.png",
-                    text: "Сайт студии косметологии",
-                }
-            ]
+                ],
+                examples: [
+                    {
+                        img: "example1.png",
+                        text: "Сайт",
+                    },
+                    {
+                        img: "example2.png",
+                        text: "Дизайн мобильного приложения",
+                    },
+                    {
+                        img: "example3.1.png",
+                        text: "Сайт онлайн турагненства",
+                    },
+                    {
+                        img: "example4.1.png",
+                        text: "Сайт студии косметологии",
+                    }
+                ]
+            }
+        },
+        components: {
+            FormComponent,
+            ButtonTransparent,
+            MainPageExample,
+            MainPageOffer,
+            FooterComponent,
+            HeaderComponent
         }
-    },
-    components: {
-        FormComponent,
-        ButtonTransparent,
-        MainPageExample,
-        MainPageOffer,
-        FooterComponent,
-        HeaderComponent
     }
-}
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     /*main*/
 
-  .section-main {
-    background: url("../../assets/white-bg-main.svg") -80px, white url("../../assets/main-header-img.png") top left no-repeat;
-  }
+    .section-main {
+        background: url("../../assets/white-bg-main.svg") -80px, white url("../../assets/main-header-img.png") top left no-repeat;
+    }
 
-  .main__container {
-      padding: 0 140px 70px;
-  }
+    .main__container {
+        padding: 0 140px 70px;
+    }
 
-  .main__logo {
-      display: block;
-      margin: 0 auto;
-  }
+    .main__logo {
+        display: block;
+        margin: 0 auto;
+    }
 
-  .main__heading{
-      font-size: 50px;
-      font-weight: normal;
-      text-align: right;
-  }
+    .main__heading {
+        font-size: 50px;
+        font-weight: normal;
+        text-align: right;
+    }
 
     /*services*/
 
@@ -159,7 +160,7 @@ export default {
         text-align: center;
     }
 
-        /*examples*/
+    /*examples*/
 
     .section-examples {
         background: url("../../assets/triangular-bg-desktop.png") center;
@@ -173,7 +174,7 @@ export default {
     }
 
     .examples__list {
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(2, auto);
         justify-content: center;
         grid-gap: 50px;
@@ -195,7 +196,6 @@ export default {
     .section-examples__btn-order--position {
         transform: translate(-50%, -50%);
     }
-
 
     /*contacts*/
 
@@ -244,7 +244,6 @@ export default {
         border-radius: 5px;
         margin: 0 auto 50px;
     }
-
 
     @media (max-width: 1200px) and (min-width: 901px) {
 
@@ -372,6 +371,5 @@ export default {
             padding: 20px 20px;
         }
     }
-
 
 </style>

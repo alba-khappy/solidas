@@ -48,6 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     .section__article-page {
@@ -161,8 +162,5 @@ export default {
         }
 
     }
-
-
-
 
 </style>

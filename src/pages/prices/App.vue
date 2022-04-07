@@ -62,6 +62,7 @@
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     .section__prices-page {
@@ -100,7 +101,6 @@
         }
     }
 
-
     @media (max-width: 900px) {
 
         .prices-page__container {
@@ -115,8 +115,6 @@
         .table-headings {
             display: none;
         }
-
     }
-
 
 </style>

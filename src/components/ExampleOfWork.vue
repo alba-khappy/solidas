@@ -13,7 +13,6 @@
     export default {
         name: 'ExampleOfWork',
         props: {
-
             workImages: {
                 type: Array,
             },

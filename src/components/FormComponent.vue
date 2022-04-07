@@ -10,7 +10,6 @@
                 #check-part-1.check-sign
                 #check-part-2.check-sign
         button(type="submit").btn.contacts__btn-sent Отправить
-
 </template>
 
 <script>
@@ -19,7 +18,6 @@
         props: {
         }
     }
-
 </script>
 
 

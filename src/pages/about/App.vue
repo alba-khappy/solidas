@@ -204,8 +204,4 @@ export default {
         }
 
     }
-
-
-
-
 </style>

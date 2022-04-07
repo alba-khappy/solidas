@@ -36,6 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     @import "../../assets/scss/general.scss";
 
     .section__contacts-page {
@@ -92,8 +93,4 @@ export default {
             margin-bottom: 150px;
         }
     }
-
-
-
-
 </style>
