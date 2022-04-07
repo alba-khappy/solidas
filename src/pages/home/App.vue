@@ -18,7 +18,7 @@
                         :offerUrl = "offer.offerUrl"
                         )
                     li.offer__btn
-                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text")
+                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text").section-services__btn-order--position
 
         section.section-examples
             div.container.examples__container
@@ -30,7 +30,7 @@
                                     :img = "example.img")
                         p.example__description Сайт онлайн турагненства
                     li.example__btn
-                        ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text")
+                        ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text").section-examples__btn-order--position
 
         section.section-contacts
             div.container.contacts__container
@@ -151,6 +151,10 @@ export default {
         margin-bottom: 40px;
     }
 
+    .section-services__btn-order--position {
+        transform: translate(-50%, -50%);
+    }
+
     .offer__btn {
         text-align: center;
     }
@@ -187,6 +191,11 @@ export default {
         color: $blackColorText;
         font-size: 20px;
     }
+
+    .section-examples__btn-order--position {
+        transform: translate(-50%, -50%);
+    }
+
 
     /*contacts*/
 
@@ -260,6 +269,13 @@ export default {
         }
     }
 
+    @media (max-width: 1024px) {
+
+        .section-services__btn-order--position {
+            transform: translate(-50%, 30%);
+        }
+    }
+
     @media (max-width: 900px) and (min-width: 501px) {
 
         .main__heading {
@@ -268,7 +284,7 @@ export default {
 
     }
 
-    @media (max-width: 900px) and (min-width: 320px) {
+    @media (max-width: 900px) {
 
         /*main*/
 

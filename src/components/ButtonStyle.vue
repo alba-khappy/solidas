@@ -27,7 +27,6 @@
 
     .button-transparent {
         position: absolute;
-        transform: translate(-50%, -50%);
         width: 180px;
         height: 60px;
         text-align: center;
