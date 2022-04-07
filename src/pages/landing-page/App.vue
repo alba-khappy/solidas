@@ -18,7 +18,8 @@
                     development-conditions(v-for = "example in examples",
                     :content = "example")
                 div.additional-page__btn-order
-                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text").additional-page__btn-order--position
+                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text", @click="popup = !popup").additional-page__btn-order--position
+                popup-component(v-show="popup")
 
                 FooterComponent
 </template>
@@ -29,11 +30,13 @@ import HeaderComponent from "../../components/HeaderComponent";
 import FooterComponent from "../../components/FooterComponent";
 import DevelopmentConditions from "../../components/DevelopmentСonditions";
 import ButtonTransparent from "../../components/ButtonStyle";
+import PopupComponent from "../../components/PopupComponent";
 
 
 export default {
   name: 'landingPage',
   components: {
+      PopupComponent,
       ButtonTransparent,
       DevelopmentConditions,
       FooterComponent,
@@ -41,6 +44,7 @@ export default {
   },
     data() {
         return {
+            popup: false,
             stepsOfDesign: [
                             "3 варианта прототипов",
                             "3 вариантов концепций дизайна (цвета, стили)",
