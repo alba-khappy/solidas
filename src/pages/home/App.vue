@@ -18,7 +18,7 @@
                         :offerUrl = "offer.offerUrl"
                         )
                     li.offer__btn
-                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text").offer__btn--position
+                        ButtonTransparent(:address = "offersBtn.address", :text = "offersBtn.text")
 
         section.section-examples
             div.container.examples__container

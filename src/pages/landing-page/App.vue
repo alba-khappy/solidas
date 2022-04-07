@@ -18,6 +18,8 @@
                 ul.additional-page__steps-list
                     development-conditions(v-for = "example in examples",
                     :content = "example")
+                div.additional-page__btn-order
+                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text").additional-page__btn-order--position
 
                 FooterComponent
 </template>
@@ -27,11 +29,13 @@
 import HeaderComponent from "../../components/HeaderComponent";
 import FooterComponent from "../../components/FooterComponent";
 import DevelopmentConditions from "../../components/DevelopmentСonditions";
+import ButtonTransparent from "../../components/ButtonStyle";
 
 
 export default {
   name: 'landingPage',
   components: {
+      ButtonTransparent,
       DevelopmentConditions,
       FooterComponent,
       HeaderComponent
@@ -52,6 +56,10 @@ export default {
                 "Посадочная страница",
                 "Сайт-визитка",
             ],
+            orderBtn: {
+                address: "/",
+                text: "Заказать",
+            },
         }
     },
 }
@@ -60,36 +68,37 @@ export default {
 <style lang="scss">
     @import "../../assets/scss/general.scss";
 
-    .section__landing-page {
-        background: url("../../assets/triangular-bg-desktop.png") center;
-        background-size: contain;
-    }
-
-    .landing-page__container {
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        padding: 50px 140px 0;
-        background: transparent url("../../assets/landing-page-header-bg.png") no-repeat top right;
-        background-size: 30%;
-    }
-
-    .h2__landing-page--primary {
-        margin-bottom: 100px;
-    }
-
-    @media (max-width: 900px) {
+        .section__landing-page {
+            background: url("../../assets/triangular-bg-desktop.png") center;
+            background-size: contain;
+        }
 
         .landing-page__container {
-            background-size: 60%;
-            background-position: top center;
-            padding: 70px 20px 0;
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            padding: 50px 140px 0;
+            background: transparent url("../../assets/landing-page-header-bg.png") no-repeat top right;
+            background-size: 30%;
         }
 
         .h2__landing-page--primary {
-            margin-bottom: 50px;
+            margin-bottom: 100px;
         }
 
-    }
+        @media (max-width: 900px) {
+
+            .landing-page__container {
+                background-size: 60%;
+                background-position: top center;
+                padding: 70px 20px 0;
+            }
+
+            .h2__landing-page--primary {
+                margin-bottom: 50px;
+            }
+
+        }
+
 
 
 

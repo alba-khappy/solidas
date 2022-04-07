@@ -12,6 +12,8 @@
                 ul.additional-page__steps-list
                     development-conditions(v-for = "example in examples",
                     :content = "example")
+                div.additional-page__btn-order
+                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text").additional-page__btn-order--position
 
                 FooterComponent
 </template>
@@ -22,11 +24,13 @@ import HeaderComponent from "../../components/HeaderComponent";
 import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
 import DevelopmentConditions from "../../components/DevelopmentСonditions";
+import ButtonTransparent from "../../components/ButtonStyle";
 
 
 export default {
   name: 'webApp',
   components: {
+      ButtonTransparent,
       DevelopmentConditions,
       FooterComponent,
       Technologies,
@@ -50,6 +54,10 @@ export default {
                 "Интернет магазин",
                 "Автоматизация",
             ],
+            orderBtn: {
+                address: "/",
+                text: "Заказать",
+            },
         }
     },
 }

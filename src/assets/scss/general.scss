@@ -103,6 +103,15 @@ body {
   text-align: center;
 }
 
+.additional-page__btn-order {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.additional-page__btn-order--position {
+  transform: translate(-50%, -200%);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
