@@ -6,6 +6,8 @@
 </template>
 
 <script>
+    import quizToConsole from '../functions/console-info';
+
     export default {
         name: 'FooterComponent',
         data() {
@@ -13,6 +15,9 @@
                 currentYear: (new Date()).getFullYear(),
                 email: 'welcome@solidas.ru'
             }
+        },
+        mounted() {
+            quizToConsole();
         }
     }
 </script>
