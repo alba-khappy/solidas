@@ -5,7 +5,7 @@
             div.container.examples-page__container
                 h2.h2.h2--secondary Works examples
                 h2.h2.h2--primary.h2__examples-page--primary Примеры работ
-                example-of-work(v-for="exampleItem in exampleList",
+                ExampleOfWork(v-for="exampleItem in exampleList",
                                 :workImages="exampleItem.workImages",
                                 :text="exampleItem.text",
                                 :link="exampleItem.link",
@@ -24,14 +24,14 @@
             return {
                 exampleList: [
                     {
-                        workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],
-                        text: "Дизайн мобильного  приложения для аренды автомобилей",
+                        workImages: ["example2.1.png", "example2.2.png", "example2.3.png", "example2.4.png"],
+                        text: "Web приложение для подбора кредитов",
+                        link: "finbucket.ru",
                         marginLeft: true,
                     },
                     {
-                        workImages: ["example2.1.png", "example2.2.png", "example2.3.png", "example2.4.png"],
-                        text: "Приложение для выбора финансовых продуктов",
-                        link: "finbucket.ru",
+                        workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],
+                        text: "Мобильное приложени для аренды авто",
                         marginLeft: true,
                     },
                     {
@@ -42,7 +42,7 @@
                     },
                     {
                         workImages: ["example4.1.png", "example4.2.png"],
-                        text: "Сайт студии косметологии",
+                        text: "Сайт-визитка студии косметологии",
                         link: "cosmetology40.ru",
                         marginLeft: false,
                     },
@@ -58,7 +58,7 @@
                     },
                     {
                         workImages: ["example7.1.png", "example7.2.png", "example7.3.png"],
-                        text: "Дизайн лендинга для магазина женского белья",
+                        text: "Сайт-визитка магазина женского белья",
                         marginLeft: false,
                     },
                     {

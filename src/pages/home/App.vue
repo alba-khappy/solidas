@@ -28,7 +28,6 @@
                     MainPageExample(v-for = "example in examples",
                         :text = "example.text",
                         :img = "example.img")
-                        p.example__description Сайт онлайн турагненства
                     li.example__btn
                         ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text").section-examples__btn-order--position
 
@@ -38,9 +37,9 @@
                 h2.h2.h2--primary.h2__contacts--primary Контакты
                 div.contacts__description
                     p.contacts__text Остались вопросы?
-                    p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время.
+                    p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время
                 FormComponent
-                p.contacts__brief-info(v-show="false") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации.
+                p.contacts__brief-info(v-show="false") Если у вас уже есть понимание, что за продукт вы хотели бы получить - заполните бриф первичной информации
                 span.contacts__brief-link(v-show="false") Заполнить бриф
 
                 FooterComponent
@@ -87,11 +86,11 @@
                 examples: [
                     {
                         img: "example1.png",
-                        text: "Сайт",
+                        text: "Web приложение для подбора кредитов",
                     },
                     {
                         img: "example2.png",
-                        text: "Дизайн мобильного приложения",
+                        text: "Мобильное приложени для аренды авто",
                     },
                     {
                         img: "example3.1.png",
@@ -99,7 +98,7 @@
                     },
                     {
                         img: "example4.1.png",
-                        text: "Сайт студии косметологии",
+                        text: "Сайт-визитка студии косметологии",
                     }
                 ]
             }
