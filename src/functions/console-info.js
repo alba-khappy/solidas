@@ -49,7 +49,7 @@ function quiz(address) {
 
 export default function quizToConsole() {
     if (Math.random() < 0.5) {
-        quiz('quiz');
+        quiz(' hr');
     } else {
         simpleMessage('hr');
     }
