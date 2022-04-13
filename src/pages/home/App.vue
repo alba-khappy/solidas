@@ -199,7 +199,7 @@
     /*contacts*/
 
     .section-contacts {
-        background: url("../../assets/contact-bg-desctop.png");
+        background: url("../../assets/contact-bg-desktop.png");
         background-size: cover;
     }
 

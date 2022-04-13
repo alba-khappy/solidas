@@ -24,45 +24,53 @@
             return {
                 exampleList: [
                     {
-                        workImages: ["example2.1.png", "example2.2.png", "example2.3.png", "example2.4.png"],
+                        workImagesDesktop: ["example2.1.d.png", "example2.2.d.png", "example2.3.d.png", "example2.4.d.png"],
+                        workImagesMobile: ["example2.1.m.png", "example2.2.m.png", "example2.3.m.png", "example2.4.m.png"],
                         text: "Web приложение для подбора кредитов",
                         link: "finbucket.ru",
                         marginLeft: true,
                     },
                     {
-                        workImages: ["example1.1.png", "example1.2.png", "example1.3.png", "example1.4.png"],
+                        workImagesDesktop: ["example1.1.d.png", "example1.2.d.png", "example1.3.d.png", "example1.4.d.png"],
+                        workImagesMobile: ["example1.1.m.png", "example1.2.m.png", "example1.3.m.png", "example1.4.m.png"],
                         text: "Мобильное приложени для аренды авто",
                         marginLeft: true,
                     },
                     {
-                        workImages: ["example3.1.png", "example3.2.png", "example3.3.png"],
+                        workImagesDesktop: ["example3.1.d.png", "example3.2.d.png", "example3.3.d.png"],
+                        workImagesMobile: ["example3.1.m.png", "example3.2.m.png", "example3.3.m.png"],
                         text: "Сайт онлайн турагенства",
                         link: "Synny-lucky.ru",
                         marginLeft: false,
                     },
                     {
-                        workImages: ["example4.1.png", "example4.2.png"],
+                        workImagesDesktop: ["example4.1.d.png", "example4.2.d.png", "example4.3.d.png"],
+                        workImagesMobile: ["example4.1.m.png", "example4.2.m.png", "example4.3.m.png"],
                         text: "Сайт-визитка студии косметологии",
                         link: "cosmetology40.ru",
                         marginLeft: false,
                     },
                     {
-                        workImages: ["example5.1.png", "example5.2.png", "example5.3.png"],
+                        workImagesDesktop: ["example5.1.d.png", "example5.2.d.png", "example5.3.d.png"],
+                        workImagesMobile: ["example5.1.m.png", "example5.2.m.png", "example5.3.m.png"],
                         text: "Лендинг - портфолио",
                         marginLeft: false,
                     },
                     {
-                        workImages: ["example6.1.png", "example6.2.png", "example6.3.png"],
+                        workImagesDesktop: ["example6.1.d.png", "example6.2.d.png", "example6.3.d.png"],
+                        workImagesMobile: ["example6.1.m.png", "example6.2.m.png", "example6.3.m.png"],
                         text: "Сайт студии студии красоты",
                         marginLeft: false,
                     },
                     {
-                        workImages: ["example7.1.png", "example7.2.png", "example7.3.png"],
+                        workImagesDesktop: ["example7.1.d.png", "example7.2.d.png", "example7.3.d.png"],
+                        workImagesMobile: ["example7.1.m.png", "example7.2.m.png", "example7.3.m.png"],
                         text: "Сайт-визитка магазина женского белья",
                         marginLeft: false,
                     },
                     {
-                        workImages: ["example8.1.png", "example8.2.png", "example8.3.png"],
+                        workImagesDesktop: ["example8.1.d.png", "example8.2.d.png", "example8.3.d.png"],
+                        workImagesMobile: ["example8.1.m.png", "example8.2.m.png", "example8.3.m.png"],
                         text: "Дизайн сайта юридической компании",
                         marginLeft: false,
                     }
