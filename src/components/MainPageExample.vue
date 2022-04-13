@@ -26,11 +26,20 @@
 
     .example__img {
         width: 350px;
+        max-height: 316px;
         margin-bottom: 40px;
     }
 
     .example__description {
         text-align: center;
     }
+
+    @media (max-width: 500px) {
+
+        .example__img {
+            width: 250px;
+        }
+    }
+
 
 </style>

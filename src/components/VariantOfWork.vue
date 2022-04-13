@@ -49,6 +49,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
         padding: 40px;
         margin-bottom: 45px;
+        transition: 0.3s;
 
         &:before {
             content: '';
@@ -56,6 +57,14 @@
             width: 40px;
             height: 60px;
         }
+
+        &:hover .option-parameters__item, &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    .option-parameters__item {
+        transition: 0.3s;
     }
 
     .option-parameters__item--type {

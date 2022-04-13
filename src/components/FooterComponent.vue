@@ -53,6 +53,7 @@
     }
 
     .page-footer__agreement {
+        display: none;
         width: min-content;
         text-align: right;
         justify-self: end;

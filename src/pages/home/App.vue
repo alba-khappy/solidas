@@ -358,10 +358,6 @@
             background-position: -180px, top left;
         }
 
-        .example__img {
-            width: 250px;
-        }
-
         .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
             font-size: 16px;
         }

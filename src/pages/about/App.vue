@@ -118,6 +118,7 @@ export default {
             position: absolute;
             background-size: contain;
             left: 0;
+            top: -4px;
         }
     }
 

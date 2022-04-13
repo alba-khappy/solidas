@@ -51,21 +51,10 @@
 
     .offer__link {
         display: grid;
-        grid-template-columns: 600px auto auto;
+        grid-template-columns: 600px auto;
         column-gap: 10px;
         color: $blackColorText;
         transition: 0.3s;
-
-        &:after {
-            content: '';
-            align-self: center;
-            justify-self: flex-end;
-            width: 10px;
-            height: 20px;
-            background: url("../assets/services-more-info.svg") no-repeat;
-            background-size: contain;
-            transition: 0.3s;
-        }
 
         &:hover .offer__heading, &:hover .offer__price, .offer__link:after{
             transform: scale(1.05);
@@ -79,7 +68,7 @@
 
     .offer__heading-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         height: 200px;
     }
@@ -108,10 +97,22 @@
         position: relative;
         align-self: center;
         text-align: center;
-        margin-right: 40px;
         font-weight: normal;
         font-size: 20px;
         transition: 0.3s;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            align-self: center;
+            justify-self: flex-end;
+            width: 10px;
+            height: 20px;
+            background: url("../assets/services-more-info.svg") no-repeat;
+            background-size: contain;
+            transition: 0.3s;
+        }
     }
 
     @media (max-width: 1340px) and (min-width: 901px) {
@@ -123,6 +124,7 @@
         .offer__heading {
             font-size: 20px;
             font-weight: 600;
+            text-align: center;
         }
     }
 
@@ -131,11 +133,16 @@
         .offer__heading-wrapper {
             grid-area: 1/1/3/3;
             background-size: 130px;
+            justify-content: center;
         }
 
         .offer__price {
             grid-area: 2/1/3/3;
             margin-right: 0;
+
+            &:after {
+                right: 15%;
+            }
         }
 
         .offer__btn {
