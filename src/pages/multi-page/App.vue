@@ -70,7 +70,7 @@ export default {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/multi-page-header-bg.png") no-repeat top right;
+        background: transparent url("../../assets/multi-page-header-bg-d.png") no-repeat top right;
         background-size: 30%;
     }
 
@@ -95,6 +95,7 @@ export default {
     @media (max-width: 500px) {
 
         .multi-page__container {
+            background-image: url("../../assets/multi-page-header-bg-m.png");
             background-size: 60%;
             padding: 100px 20px 0;
         }

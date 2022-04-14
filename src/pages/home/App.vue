@@ -27,7 +27,8 @@
                 ul.examples__list
                     MainPageExample(v-for = "example in examples",
                         :text = "example.text",
-                        :img = "example.img")
+                        :imgDesktop = "example.imgDesktop",
+                        :imgMobile = "example.imgMobile")
                     li.example__btn
                         ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text").section-examples__btn-order--position
 
@@ -85,19 +86,23 @@
                 ],
                 examples: [
                     {
-                        img: "example1.png",
+                        imgDesktop: "example1.d.png",
+                        imgMobile: "example1.m.png",
                         text: "Web приложение для подбора кредитов",
                     },
                     {
-                        img: "example2.png",
+                        imgDesktop: "example2.d.png",
+                        imgMobile: "example2.m.png",
                         text: "Мобильное приложени для аренды авто",
                     },
                     {
-                        img: "example3.1.png",
+                        imgDesktop: "example3.1.d.png",
+                        imgMobile: "example3.1.m.png",
                         text: "Сайт онлайн турагненства",
                     },
                     {
-                        img: "example4.1.png",
+                        imgDesktop: "example4.1.d.png",
+                        imgMobile: "example4.1.m.png",
                         text: "Сайт-визитка студии косметологии",
                     }
                 ]
@@ -359,6 +364,10 @@
 
         .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
             font-size: 16px;
+        }
+
+        .section-contacts {
+            background-image: url("../../assets/contact-bg-mobile.png");
         }
 
         .contacts__form {

@@ -6,7 +6,8 @@
                 h2.h2.h2--secondary Works examples
                 h2.h2.h2--primary.h2__examples-page--primary Примеры работ
                 ExampleOfWork(v-for="exampleItem in exampleList",
-                                :workImages="exampleItem.workImages",
+                                :workImagesDesktop="exampleItem.workImagesDesktop",
+                                :workImagesMobile="exampleItem.workImagesMobile",
                                 :text="exampleItem.text",
                                 :link="exampleItem.link",
                                 :marginLeft="exampleItem.marginLeft")
@@ -98,7 +99,7 @@
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 100px 0;
-        background: transparent url("../../assets/examples-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/examples-header-bg-d.png") no-repeat top right;
         background-size: 40%;
     }
 
@@ -109,6 +110,7 @@
     @media (max-width: 900px) {
 
         .examples-page__container {
+            background-image: url("../../assets/examples-header-bg-m.png");
             background-size: 50%;
             background-position: top center;
         }

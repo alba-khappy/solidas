@@ -1,6 +1,7 @@
 <template lang="pug">
     li
-        img(:src="require(`../assets/${img}`)").example__img
+        img(:src="require(`../assets/${imgDesktop}`)").example__img.example__img--desktop
+        img(:src="require(`../assets/${imgMobile}`)").example__img.example__img--mobile
         p.example__description {{text}}
 </template>
 
@@ -8,9 +9,11 @@
     export default {
         name: 'MainPageExample',
         props: {
-            img: {
+            imgDesktop: {
                 type: String,
-                required: true,
+            },
+            imgMobile: {
+                type: String,
             },
             text: {
                 type: String,
@@ -27,7 +30,15 @@
     .example__img {
         width: 350px;
         max-height: 316px;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
+    }
+
+    .example__img--mobile {
+        display: none;
+    }
+
+    .example__img--desktop {
+        display: block;
     }
 
     .example__description {
@@ -38,6 +49,14 @@
 
         .example__img {
             width: 250px;
+        }
+
+        .example__img--desktop {
+            display: none;
+        }
+
+        .example__img--mobile {
+            display: block;
         }
     }
 

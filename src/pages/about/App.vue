@@ -132,7 +132,7 @@ export default {
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/about-header-bg-desktop.png") no-repeat top right;
+        background: transparent url("../../assets/about-header-bg-d.png") no-repeat top right;
         background-size: 30%;
     }
 
@@ -188,6 +188,7 @@ export default {
     @media (max-width: 900px) {
 
         .about-page__container {
+            background-image: url("../../assets/about-header-bg-m.png");
             background-size: 60%;
             background-position: top center;
         }

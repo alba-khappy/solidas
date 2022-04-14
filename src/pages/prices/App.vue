@@ -75,7 +75,7 @@
         display: grid;
         grid-template-rows: repeat(2, auto);
         padding: 50px 140px 0;
-        background: transparent url("../../assets/services-header-bg-desktop.png") no-repeat right -5px;
+        background: transparent url("../../assets/services-header-bg-d.png") no-repeat right -5px;
         background-size: 40%;
     }
 
@@ -105,6 +105,7 @@
 
         .prices-page__container {
             background-size: 60%;
+            background-image: url("../../assets/services-header-bg-m.png");
             background-position: center -5px;
         }
 
