@@ -36,9 +36,10 @@
     @import "../assets/scss/general.scss";
 
     .offers__list {
+        max-width: 1160px;
         background: #F0F7F9;
         padding: 40px 110px 65px;
-        margin-bottom: 50px;
+        margin: 0 auto 50px;
         box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
     }
 
@@ -112,6 +113,7 @@
             background: url("../assets/services-more-info.svg") no-repeat;
             background-size: contain;
             transition: 0.3s;
+            transform: translateX(20px);
         }
     }
 
@@ -134,14 +136,17 @@
             grid-area: 1/1/3/3;
             background-size: 130px;
             justify-content: center;
+            padding-left: 100px;
         }
 
         .offer__price {
             grid-area: 2/1/3/3;
             margin-right: 0;
+            padding-left: 100px;
 
             &:after {
-                right: 15%;
+                right: auto;
+                transform: translateX(10px);
             }
         }
 
@@ -154,12 +159,14 @@
         }
 
         .offers__list {
-            padding: 0 30px 90px;
+            width: 650px;
+            margin: 0 auto;
+            padding: 0 0 90px 30px;
         }
 
         .offer__link {
             grid-template-columns: repeat(2, auto);
-            grid-template-rows: 180px auto;
+            grid-template-rows: 90px auto;
 
             &:after {
                 grid-area: 1/2/3/3;
@@ -170,9 +177,18 @@
         .offer__heading {
             font-size: 20px;
             font-weight: 600;
-            padding-left: 140px;
+            padding-left: 0;
         }
     }
+
+    @media (max-width: 900px) {
+
+        .offers__list {
+            width: 450px;
+        }
+
+    }
+
 
     @media (max-width: 500px) {
 
@@ -182,17 +198,24 @@
         }
 
         .offers__list {
+            width: 310px;
             position: relative;
             padding: 20px 10px 110px 5px;
         }
 
         .offer__heading-wrapper  {
-            height: 120px;
-            background-size: 60px;
+            height: 100px;
+            background-size: 80px;
+            padding-left: 70px;
+        }
+
+        .offer__price {
+            padding-left: 70px;
         }
 
         .offer__heading {
-            padding-left:70px;
+            max-width: 190px;
+            text-align: center;
             font-size: 18px;
         }
 

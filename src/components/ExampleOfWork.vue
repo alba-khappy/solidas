@@ -44,7 +44,7 @@
     .examples__wrapper {
         overflow: hidden;
         overflow-x: auto;
-        margin-bottom: 80px;
+        padding: 10px 0 30px;
     }
 
     .examples__wrapper--mobile-images {
@@ -74,12 +74,12 @@
     }
 
     .examples__work-description-wrapper {
-        position: absolute;
+        //position: absolute;
     }
 
     .examples__work-description {
         text-align: left;
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
     }
 
     .examples__work-link {
@@ -88,6 +88,7 @@
         text-align: left;
         color: $blackColorText;
         border-bottom: 1px solid $blackColorText;
+        padding-top: 20px;
     }
 
     .examples__img {
@@ -102,7 +103,7 @@
 
     @media (max-width: 1480px) {
         .examples__wrapper {
-            margin-bottom: 80px;
+            //margin-bottom: 80px;
         }
 
         .examples-page__container {

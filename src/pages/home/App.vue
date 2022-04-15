@@ -275,7 +275,7 @@
     @media (max-width: 1024px) {
 
         .section-services__btn-order--position {
-            transform: translate(-50%, 30%);
+            transform: translate(-50%, 0%);
         }
     }
 
@@ -364,6 +364,10 @@
 
         .example__btn-link, .contacts__brief-link, .contacts__btn-sent {
             font-size: 16px;
+        }
+
+        .section-services__btn-order--position {
+            transform: translate(-50%, 25%);
         }
 
         .section-contacts {
