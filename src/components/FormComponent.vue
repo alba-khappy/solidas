@@ -1,8 +1,8 @@
 <template lang="pug">
     form.contacts__form
-        input(type="text", placeholder="Введите имя", name="name", v-model="name").contacts__input
-        input(type="tel", placeholder="Введите номер телефона", name="tel", v-model="tel").contacts__input
-        input(type="email", placeholder="Введите email", name="email", v-model="email").contacts__input
+        input(type="text", placeholder="Введите имя", name="name", v-model="name", :class="{ error: formChecked && !name }").contacts__input
+        input(type="tel", placeholder="Введите номер телефона", name="tel", v-model="tel", :class="{ error: formChecked && !tel }").contacts__input
+        input(type="email", placeholder="Введите email", name="email", v-model="email", :class="{ error: formChecked && !email }").contacts__input
         label.check-label
             div.check-text Согласие на обработку персональных данных
             input(type='checkbox')#check
@@ -22,13 +22,15 @@
                 name: '',
                 tel: '',
                 email: '',
+                formChecked: false,
                 send: false
             }
         },
         methods: {
             sendMail() {
-                console.log(this.name, this.tel, this.email);
-                if (this.name && this.tel && this.email) {
+                this.formChecked = true;
+
+                if (this.name && this.tel && this.email){
                     fetch('mail.php', {
                         method: 'post',
                         headers: {
@@ -77,6 +79,10 @@
         padding: 10px 20px;
         font-size: 16px;
         transition: 0.3s;
+
+        &.error {
+            border-color: red;
+        }
 
         &::placeholder {
             color: #7E7E7E;
