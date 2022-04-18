@@ -14,7 +14,7 @@ function simpleMessage(address) {
     } else {
         console.log(
             '%c' +
-            'Нашел ошибку или знаешь, как сделать лучше? \nПрисылай описание вместе со своим резюме на ' +
+            'Нашел ошибку или знаешь, как сделать лучше? \nПрисылай замечания вместе со своим резюме на ' +
             getAddress(address), consoleStylesMain, consoleStylesEmail);
     }
 }
