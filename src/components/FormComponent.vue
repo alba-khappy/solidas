@@ -22,6 +22,7 @@
                 name: '',
                 tel: '',
                 email: '',
+                send: false
             }
         },
         methods: {
