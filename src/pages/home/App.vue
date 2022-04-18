@@ -69,17 +69,17 @@
                 offers: [
                     {
                         heading: "Лендинг",
-                        price: "От 60 000 руб.",
+                        price: "От 60 000 ₽",
                         offerUrl: "/landing-page.html",
                     },
                     {
                         heading: "Многостраничный сайт",
-                        price: "От 100 000 руб.",
+                        price: "От 100 000 ₽",
                         offerUrl: "/multi-page.html",
                     },
                     {
                         heading: "Веб сервисы и приложения",
-                        price: "От 350 000 руб.",
+                        price: "От 350 000 ₽",
                         offerUrl: "/web-app.html",
                     },
 
