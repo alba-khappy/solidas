@@ -1,15 +1,15 @@
 <template lang="pug">
     form.contacts__form
-        input(type="text", placeholder="Введите имя", name="name").contacts__input
-        input(type="tel", placeholder="Введите номер телефона", name="tel").contacts__input
-        input(type="email", placeholder="Введите email", name="email").contacts__input
+        input(type="text", placeholder="Введите имя", name="name", v-model="name").contacts__input
+        input(type="tel", placeholder="Введите номер телефона", name="tel", v-model="tel").contacts__input
+        input(type="email", placeholder="Введите email", name="email", v-model="email").contacts__input
         label.check-label
             div.check-text Согласие на обработку персональных данных
             input(type='checkbox')#check
             .wrap
                 #check-part-1.check-sign
                 #check-part-2.check-sign
-        button(type="submit").btn.contacts__btn-sent Отправить
+        button(type="button", @click="sendMail").btn.contacts__btn-sent Отправить
 </template>
 
 <script>
@@ -26,7 +26,8 @@
         },
         methods: {
             sendMail() {
-                if (this.name && this.tel && this.email && this.tel.length > 12) {
+                console.log(this.name, this.tel, this.email);
+                if (this.name && this.tel && this.email) {
                     fetch('mail.php', {
                         method: 'post',
                         headers: {
