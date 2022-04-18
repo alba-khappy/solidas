@@ -25,8 +25,7 @@
                         :alt2 = "technologies.alt2",
                         :alt3 = "technologies.alt3",
                     )
-                p.about-page__article Наше
-                    a(href="/how-to-become-a-developer.html").about-page__article-link  мнение о нашей профессии
+                p.about-page__article Наше <a href="/how-to-become-a-developer.html" class='about-page__article-link'> мнение о нашей профессии</a>
 
                 FooterComponent
 </template>
