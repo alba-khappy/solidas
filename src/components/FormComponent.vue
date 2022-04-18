@@ -16,6 +16,35 @@
     export default {
         name: 'FormComponent',
         props: {
+        },
+        data() {
+            return {
+                name: '',
+                tel: '',
+                email: '',
+            }
+        },
+        methods: {
+            sendMail() {
+                if (this.name && this.tel && this.email && this.tel.length > 12) {
+                    fetch('mail.php', {
+                        method: 'post',
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: this.name,
+                            phone: this.tel,
+                            email: this.email
+                        })
+                    }).then((res) => {
+                        if (res.status === 200) {
+                            this.send = true;
+                        }
+                    });
+                }
+            },
         }
     }
 </script>
