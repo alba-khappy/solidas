@@ -1,5 +1,10 @@
 <template lang="pug">
-    a(:href="address").button-transparent {{text}}
+    a(v-if="address" :href="address").button-transparent {{text}}
+        span
+        span
+        span
+        span
+    a(v-else @click="$emit('button-click')").button-transparent {{text}}
         span
         span
         span
@@ -10,13 +15,13 @@
     export default {
         name: 'ButtonTransparent',
         props: {
-                address: {
-                    type: String,
-                },
-                text: {
-                    type: String,
-                },
+            address: {
+                type: String,
             },
+            text: {
+                type: String,
+            },
+        }
     }
 </script>
 
@@ -26,6 +31,7 @@
     @import "../assets/scss/general.scss";
 
     .button-transparent {
+        cursor: pointer;
         position: absolute;
         width: 180px;
         height: 60px;

@@ -9,12 +9,15 @@
             .wrap
                 #check-part-1.check-sign
                 #check-part-2.check-sign
-        button(type="button", @click="sendMail").btn.contacts__btn-sent Отправить
+        div.button-container
+            ButtonTransparent(text="Отправить" @button-click="sendMail")
 </template>
 
 <script>
+    import ButtonTransparent from './ButtonStyle';
     export default {
         name: 'FormComponent',
+        components: {ButtonTransparent},
         props: {
         },
         data() {
@@ -57,6 +60,13 @@
 <style lang="scss">
 
     @import "../assets/scss/general.scss";
+
+    .button-container {
+        position: relative;
+        width: 180px;
+        height: 60px;
+        z-index: 0;
+    }
 
     .contacts__form {
         display: flex;
