@@ -3,8 +3,8 @@
         input(type="text", placeholder="Введите имя", name="name", v-model="name", :class="{ error: formChecked && !name }").contacts__input
         input(type="tel", placeholder="Введите номер телефона", name="tel", v-model="tel", :class="{ error: formChecked && !tel }").contacts__input
         input(type="email", placeholder="Введите email", name="email", v-model="email", :class="{ error: formChecked && !email }").contacts__input
-        label.check-label
-            div.check-text Согласие на обработку персональных данных
+        label(v-if="false").check-label
+            div.check-text Соглашаюсь на обработку информации
             input(type='checkbox')#check
             .wrap
                 #check-part-1.check-sign
