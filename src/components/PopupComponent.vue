@@ -13,14 +13,6 @@
         components: {
             FormComponent
         },
-        props: {
-            address: {
-                type: String,
-            },
-            text: {
-                type: String,
-            },
-        },
     }
 </script>
 
