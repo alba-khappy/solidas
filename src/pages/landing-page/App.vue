@@ -75,6 +75,7 @@ export default {
         .section__landing-page {
             background: url("../../assets/triangular-bg-desktop.png") center;
             background-size: contain;
+            height: 100vh;
         }
 
         .landing-page__container {

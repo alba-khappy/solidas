@@ -10,7 +10,8 @@
                 #check-part-1.check-sign
                 #check-part-2.check-sign
         div.button-container
-            ButtonTransparent(text="Отправить" @button-click="sendMail")
+            ButtonTransparent(text="Отправить" @button-click="sendMail").form__btn
+        div.form__message-success Сообщение отправлено. В скором времени с Вами свяжется менеджер.
 </template>
 
 <script>
@@ -48,6 +49,9 @@
                     }).then((res) => {
                         if (res.status === 200) {
                             this.send = true;
+                            document.querySelector('.form__btn').style.display = 'none';
+                            document.querySelector('.contacts__input').style.display = 'none';
+                            document.querySelector('.form__message-success').style.display = 'block';
                         }
                     });
                 }
@@ -111,6 +115,12 @@
         color: $blackColorText;
         background-color: transparent;
         font-size: 20px;
+    }
+
+    .form__message-success {
+        display: none;
+        text-align: center;
+        font-size: 25px;
     }
 
     @media (max-width: 900px) {

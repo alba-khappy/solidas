@@ -85,7 +85,7 @@ body {
 
 .additional-page__steps-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   margin-bottom: 50px;
 }
