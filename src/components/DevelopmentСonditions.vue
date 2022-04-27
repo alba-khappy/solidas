@@ -20,16 +20,27 @@
     @import "../assets/scss/general.scss";
 
     .additional-page__step {
-        width: 280px;
-        height: 130px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 20px;
-        text-align: center;
-        background-color: #F0F7F9;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: '';
+            background: url("../../src/assets/about-check.svg") no-repeat center;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-size: contain;
+            left: 0;
+            top: -4px;
+        }
+    }
+
+    @media (max-width: 900px) {
+
+        .additional-page__step {
+            width: 300px;
+            text-align: left;
+        }
     }
 
 </style>
