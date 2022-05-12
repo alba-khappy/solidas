@@ -120,11 +120,17 @@
 
     .form__message-success {
         @include formStyle;
+        max-width: 546px;
         text-align: center;
         font-size: 25px;
     }
 
     @media (max-width: 900px) {
+
+        .form__message-success {
+            padding: 30px;
+            font-size: 18px;
+        }
 
         .contacts__form {
             padding: 30px;

@@ -76,5 +76,14 @@
         }
     }
 
+    @media (max-width: 900px) {
+
+        .popup__btn-close  {
+            right: -5px;
+        }
+    }
+
+
+
 </style>
 
