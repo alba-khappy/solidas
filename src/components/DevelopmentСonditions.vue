@@ -26,12 +26,12 @@
         &:before {
             content: '';
             background: url("../../src/assets/about-check.svg") no-repeat center;
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             position: absolute;
             background-size: contain;
             left: 0;
-            top: -4px;
+            top: -2px;
         }
     }
 
