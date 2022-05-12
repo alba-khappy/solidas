@@ -141,4 +141,12 @@
         }
     }
 
+    @media (max-width: 600px) {
+        .form__message-success {
+            max-width: 280px;
+            padding: 20px 15px;
+        }
+    }
+
+
 </style>
