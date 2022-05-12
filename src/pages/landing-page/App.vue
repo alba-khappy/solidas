@@ -18,7 +18,7 @@
                     development-conditions(v-for = "example in examples",
                     :content = "example")
                 div.additional-page__btn-order
-                    button-transparent(:text = "orderBtn.text", @button-click="popup = !popup").additional-page__btn-order--position
+                    button-transparent(:text = "orderBtn.text", @button-click="popup = !popup", @click="noScroll").additional-page__btn-order--position
                 popup-component(v-show="popup", @close-popup="popup = !popup")
 
                 FooterComponent
@@ -66,7 +66,10 @@ export default {
         }
     },
     methods: {
-
+            noScroll(){
+                this.popup = !this.popup;
+                document.body.classList.toggle('no-scroll');
+            }
     }
 }
 </script>
