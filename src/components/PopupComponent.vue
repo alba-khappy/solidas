@@ -1,7 +1,7 @@
 <template lang="pug">
     div.popup__container
         div.popup
-            button.popup__btn-close(@click="popup = !popup")
+            button.popup__btn-close(@click="$emit('close-popup')")
             form-component
 </template>
 

@@ -18,8 +18,8 @@
                     development-conditions(v-for = "example in examples",
                     :content = "example")
                 div.additional-page__btn-order
-                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text", @click="link, popup = !popup").additional-page__btn-order--position
-                popup-component(v-show="popup")
+                    button-transparent(:text = "orderBtn.text", @button-click="popup = !popup").additional-page__btn-order--position
+                popup-component(v-show="popup", @close-popup="popup = !popup")
 
                 FooterComponent
 </template>
@@ -66,10 +66,7 @@ export default {
         }
     },
     methods: {
-        link(e) {
-            e.preventDefault();
-            console.log(e.currentTarget.href);
-        }
+
     }
 }
 </script>

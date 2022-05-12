@@ -1,5 +1,5 @@
 <template lang="pug">
-    form.contacts__form
+    form.contacts__form(v-if="!send")
         input(type="text", placeholder="Введите имя", name="name", v-model="name", :class="{ error: formChecked && !name }").contacts__input
         input(type="tel", placeholder="Введите номер телефона", name="tel", v-model="tel", :class="{ error: formChecked && !tel }").contacts__input
         input(type="email", placeholder="Введите email", name="email", v-model="email", :class="{ error: formChecked && !email }").contacts__input
@@ -11,7 +11,7 @@
                 #check-part-2.check-sign
         div.button-container
             ButtonTransparent(text="Отправить" @button-click="sendMail").form__btn
-        div.form__message-success Сообщение отправлено. В скором времени с Вами свяжется менеджер.
+    div.form__message-success(v-else="send") Сообщение отправлено. Мы скоро с вами свяжемся.
 </template>
 
 <script>
@@ -49,9 +49,6 @@
                     }).then((res) => {
                         if (res.status === 200) {
                             this.send = true;
-                            document.querySelector('.form__btn').style.display = 'none';
-                            document.querySelector('.contacts__input').style.display = 'none';
-                            document.querySelector('.form__message-success').style.display = 'block';
                         }
                     });
                 }
@@ -65,14 +62,7 @@
 
     @import "../assets/scss/general.scss";
 
-    .button-container {
-        position: relative;
-        width: 180px;
-        height: 60px;
-        z-index: 0;
-    }
-
-    .contacts__form {
+    @mixin formStyle {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,6 +71,17 @@
         padding: 30px 100px;
         margin: 0 auto 80px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .button-container {
+        position: relative;
+        width: 180px;
+        height: 60px;
+        z-index: 0;
+    }
+
+    .contacts__form {
+        @include formStyle;
     }
 
     .contacts__input {
@@ -118,7 +119,7 @@
     }
 
     .form__message-success {
-        display: none;
+        @include formStyle;
         text-align: center;
         font-size: 25px;
     }
