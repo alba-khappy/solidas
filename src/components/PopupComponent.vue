@@ -1,7 +1,7 @@
 <template lang="pug">
     div.popup__container
         div.popup
-            button.popup__btn-close(@click="$emit('close-popup')")
+            button.popup__btn-close(@click="$emit('close-popup'), noScroll")
             form-component
 </template>
 
@@ -13,6 +13,11 @@
         components: {
             FormComponent
         },
+        methods: {
+            noScroll(){
+                document.body.classList.toggle('no-scroll');
+            }
+        }
     }
 </script>
 
