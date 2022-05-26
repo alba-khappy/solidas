@@ -74,17 +74,35 @@
         height: 200px;
     }
 
-    .offer__wrapper--img-0 {
-        background: url("../assets/services-img-desktop-1.png") no-repeat 0;
+    @media (max-width: 500px) {
+        .offer__wrapper--img-0 {
+            background: url("../assets/services-img-mobile-1.png") no-repeat 0;
+        }
+
+        .offer__wrapper--img-1 {
+            background: url("../assets/services-img-mobile-2.png") no-repeat 0;
+        }
+
+        .offer__wrapper--img-2 {
+            background: url("../assets/services-img-mobile-3.png") no-repeat 0;
+        }
     }
 
-    .offer__wrapper--img-1 {
-        background: url("../assets/services-img-desktop-2.png") no-repeat 0;
+    @media (min-width: 501px) {
+        .offer__wrapper--img-0 {
+            background: url("../assets/services-img-desktop-1.png") no-repeat 0;
+        }
+
+        .offer__wrapper--img-1 {
+            background: url("../assets/services-img-desktop-2.png") no-repeat 0;
+        }
+
+        .offer__wrapper--img-2 {
+            background: url("../assets/services-img-desktop-3.png") no-repeat 0;
+        }
     }
 
-    .offer__wrapper--img-2 {
-        background: url("../assets/services-img-desktop-3.png") no-repeat 0;
-    }
+
 
     .offer__heading {
         padding-left: 200px;
