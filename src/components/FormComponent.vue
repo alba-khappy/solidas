@@ -35,7 +35,7 @@
                 this.formChecked = true;
 
                 if (this.name && this.tel && this.email){
-                    fetch('mail.php', {
+                    fetch('/mail.php', {
                         method: 'post',
                         headers: {
                             'Accept': 'application/json, text/plain, */*',
