@@ -31,7 +31,7 @@
             position: absolute;
             background-size: contain;
             left: 0;
-            top: -2px;
+            top: -3px;
         }
     }
 
