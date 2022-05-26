@@ -13,8 +13,8 @@
                     development-conditions(v-for = "example in examples",
                     :content = "example")
                 div.additional-page__btn-order
-                    button-transparent(:address = "orderBtn.address", :text = "orderBtn.text").additional-page__btn-order--position
-
+                    button-transparent(:text = "'Заказать'", @button-click="noScroll").additional-page__btn-order--position
+                PopupComponent(v-show="popup", @close-popup="noScroll")
                 FooterComponent
 </template>
 
@@ -25,11 +25,13 @@ import Technologies from "../../components/Technologies";
 import FooterComponent from "../../components/FooterComponent";
 import DevelopmentConditions from "../../components/DevelopmentСonditions";
 import ButtonTransparent from "../../components/ButtonStyle";
+import PopupComponent from '../../components/PopupComponent';
 
 
 export default {
   name: 'webApp',
   components: {
+      PopupComponent,
       ButtonTransparent,
       DevelopmentConditions,
       FooterComponent,
@@ -38,6 +40,7 @@ export default {
   },
     data() {
         return {
+            popup: false,
             steps: [
                 "Предпроектное обследование, сбор общих требований, формализация функциональных требований",
                 "Подбор и разработка дизайна",
@@ -53,13 +56,15 @@ export default {
                 "Соцсети",
                 "Интернет магазин",
                 "Автоматизация",
-            ],
-            orderBtn: {
-                address: "/",
-                text: "Заказать",
-            },
+            ]
         }
     },
+    methods: {
+        noScroll(){
+            this.popup = !this.popup;
+            document.body.classList.toggle('no-scroll');
+        }
+    }
 }
 </script>
 

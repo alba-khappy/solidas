@@ -18,8 +18,8 @@
                     development-conditions(v-for = "example in examples",
                     :content = "example")
                 div.additional-page__btn-order
-                    button-transparent(:text = "orderBtn.text", @button-click="popup = !popup" @click="noScroll").additional-page__btn-order--position
-                popup-component(v-show="popup", @close-popup="popup = !popup")
+                    button-transparent(:text = "'Заказать'", @button-click="noScroll").additional-page__btn-order--position
+                PopupComponent(v-show="popup", @close-popup="noScroll")
 
                 FooterComponent
 </template>
@@ -58,14 +58,14 @@ export default {
             examples: [
                 "Посадочная страница",
                 "Сайт-визитка",
-            ],
-            orderBtn: {
-                address: "/",
-                text: "Заказать",
-            },
+            ]
         }
     },
     methods: {
+        noScroll(){
+            this.popup = !this.popup;
+            document.body.classList.toggle('no-scroll');
+        }
     }
 }
 </script>
