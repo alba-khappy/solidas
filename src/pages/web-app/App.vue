@@ -67,8 +67,19 @@ export default {
 
     @import "../../assets/scss/general.scss";
 
+    @media (max-width: 500px) {
+        .section__web-app-page {
+            background: url("../../assets/triangular-bg-mobile.png") center;
+        }
+    }
+
+    @media (min-width: 501px) {
+        .section__web-app-page {
+            background: url("../../assets/triangular-bg-desktop.png") center;
+        }
+    }
+
     .section__web-app-page {
-        background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: cover;
         height: 100vh;
     }

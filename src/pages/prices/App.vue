@@ -65,8 +65,19 @@
 
     @import "../../assets/scss/general.scss";
 
+    @media (max-width: 500px) {
+        .section__prices-page {
+            background: url("../../assets/triangular-bg-mobile.png") center;
+        }
+    }
+
+    @media (min-width: 501px) {
+        .section__prices-page {
+            background: url("../../assets/triangular-bg-desktop.png") center;
+        }
+    }
+
     .section__prices-page {
-        background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: contain;
         min-height: 100vh;
     }

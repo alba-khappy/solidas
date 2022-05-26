@@ -90,8 +90,19 @@
 
     @import "../../assets/scss/general.scss";
 
+    @media (max-width: 500px) {
+        .section__examples-page {
+            background: url("../../assets/triangular-bg-mobile.png") center repeat;
+        }
+    }
+
+    @media (min-width: 501px) {
+        .section__examples-page {
+            background: url("../../assets/triangular-bg-desktop.png") center repeat;
+        }
+    }
+
     .section__examples-page {
-        background: url("../../assets/triangular-bg-desktop.png") center repeat;
         background-size: contain;
     }
 

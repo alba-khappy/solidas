@@ -74,37 +74,48 @@ export default {
 
     @import "../../assets/scss/general.scss";
 
+    @media (max-width: 500px) {
+        .section__landing-page {
+            background: url("../../assets/triangular-bg-mobile.png") center;
+        }
+    }
+
+    @media (min-width: 501px) {
         .section__landing-page {
             background: url("../../assets/triangular-bg-desktop.png") center;
-            background-size: contain;
-            height: 100vh;
         }
+    }
+
+    .section__landing-page {
+        background-size: contain;
+        height: 100vh;
+    }
+
+    .landing-page__container {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        padding: 50px 140px 0;
+        background: transparent url("../../assets/landing-page-header-bg-d.png") no-repeat top right;
+        background-size: 30%;
+    }
+
+    .h2__landing-page--primary {
+        margin-bottom: 100px;
+    }
+
+    @media (max-width: 900px) {
 
         .landing-page__container {
-            display: grid;
-            grid-template-rows: repeat(2, auto);
-            padding: 50px 140px 0;
-            background: transparent url("../../assets/landing-page-header-bg-d.png") no-repeat top right;
-            background-size: 30%;
+            background-image: url("../../assets/landing-page-header-bg-m.png");
+            background-size: 60%;
+            background-position: top center;
+            padding: 70px 20px 0;
         }
 
         .h2__landing-page--primary {
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
 
-        @media (max-width: 900px) {
-
-            .landing-page__container {
-                background-image: url("../../assets/landing-page-header-bg-m.png");
-                background-size: 60%;
-                background-position: top center;
-                padding: 70px 20px 0;
-            }
-
-            .h2__landing-page--primary {
-                margin-bottom: 50px;
-            }
-
-        }
+    }
 
 </style>

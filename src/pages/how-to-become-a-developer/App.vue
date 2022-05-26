@@ -50,8 +50,19 @@ export default {
 
     @import "../../assets/scss/general.scss";
 
+    @media (max-width: 500px) {
+        .section__article-page {
+            background: url("../../assets/triangular-bg-mobile.png") center repeat-y;
+        }
+    }
+
+    @media (min-width: 501px) {
+        .section__article-page {
+            background: url("../../assets/triangular-bg-desktop.png") center repeat-y;
+        }
+    }
+
     .section__article-page {
-        background: url("../../assets/triangular-bg-desktop.png") center repeat-y;
         background-size: contain;
     }
 

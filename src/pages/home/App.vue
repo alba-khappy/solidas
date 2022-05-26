@@ -166,8 +166,19 @@
 
     /*examples*/
 
+    @media (max-width: 500px) {
+        .section-examples {
+            background: url("../../assets/triangular-bg-mobile.png") center;
+        }
+    }
+
+    @media (min-width: 501px) {
+        .section-examples {
+            background: url("../../assets/triangular-bg-desktop.png") center;
+        }
+    }
+
     .section-examples {
-        background: url("../../assets/triangular-bg-desktop.png") center;
         background-size: contain;
     }
 
