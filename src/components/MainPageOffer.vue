@@ -75,15 +75,15 @@
     }
 
     .offer__wrapper--img-0 {
-        background: url("../assets/services-img-desctop-1.png") no-repeat 0;
+        background: url("../assets/services-img-desktop-1.png") no-repeat 0;
     }
 
     .offer__wrapper--img-1 {
-        background: url("../assets/services-img-desctop-2.png") no-repeat 0;
+        background: url("../assets/services-img-desktop-2.png") no-repeat 0;
     }
 
     .offer__wrapper--img-2 {
-        background: url("../assets/services-img-desctop-3.png") no-repeat 0;
+        background: url("../assets/services-img-desktop-3.png") no-repeat 0;
     }
 
     .offer__heading {
