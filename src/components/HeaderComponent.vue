@@ -28,19 +28,19 @@ export default {
             show: false,
             headerLinks: [
                 {
-                    url: "/about.html",
+                    url: "/about",
                     page: "О нас",
                 },
                 {
-                    url: "/prices.html",
+                    url: "/prices",
                     page: "Услуги и цены",
                 },
                 {
-                    url: "/examples.html",
+                    url: "/examples",
                     page: "Примеры работ",
                 },
                 {
-                    url: "/contacts.html",
+                    url: "/contacts",
                     page: "Контакты",
                 },
             ]

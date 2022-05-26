@@ -59,28 +59,28 @@
         data() {
             return {
                 offersBtn: {
-                    address: "/prices.html",
+                    address: "/prices",
                     text: "Сравнить",
                 },
                 examplesBtn: {
-                    address: "/examples.html",
+                    address: "/examples",
                     text: "Смотреть все работы",
                 },
                 offers: [
                     {
                         heading: "Лендинг",
                         price: "От 60 000 ₽",
-                        offerUrl: "/landing-page.html",
+                        offerUrl: "/landing-page",
                     },
                     {
                         heading: "Многостраничный сайт",
                         price: "От 100 000 ₽",
-                        offerUrl: "/multi-page.html",
+                        offerUrl: "/multi-page",
                     },
                     {
                         heading: "Веб сервисы и приложения",
                         price: "От 350 000 ₽",
-                        offerUrl: "/web-app.html",
+                        offerUrl: "/web-app",
                     },
 
                 ],

@@ -4,7 +4,7 @@ module.exports = {
             // entry for the page
             entry: 'src/pages/home/main.js',
             // the source template
-            template: 'public/index.html',
+            template: 'public/index',
             // output as dist/index.html
             filename: 'index.html',
             // when using title option,
@@ -24,7 +24,7 @@ module.exports = {
             // the source template
             template: 'public/about.html',
             // output as dist/index.html
-            filename: 'about.html',
+            filename: 'about/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'about']
         },
         prices: {
@@ -33,7 +33,7 @@ module.exports = {
             // the source template
             template: 'public/prices.html',
             // output as dist/index.html
-            filename: 'prices.html',
+            filename: 'prices/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'prices']
         },
         examples: {
@@ -42,7 +42,7 @@ module.exports = {
             // the source template
             template: 'public/examples.html',
             // output as dist/index.html
-            filename: 'examples.html',
+            filename: 'examples/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'examples']
         },
         landingPage: {
@@ -51,7 +51,7 @@ module.exports = {
             // the source template
             template: 'public/landing-page.html',
             // output as dist/index.html
-            filename: 'landing-page.html',
+            filename: 'landing-page/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'landingPage']
         },
         multiPage: {
@@ -60,7 +60,7 @@ module.exports = {
             // the source template
             template: 'public/multi-page.html',
             // output as dist/index.html
-            filename: 'multi-page.html',
+            filename: 'multi-page/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'multiPage']
         },
         webApp: {
@@ -69,7 +69,7 @@ module.exports = {
             // the source template
             template: 'public/web-app.html',
             // output as dist/index.html
-            filename: 'web-app.html',
+            filename: 'web-app/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'webApp']
         },
         contacts: {
@@ -78,7 +78,7 @@ module.exports = {
             // the source template
             template: 'public/contacts.html',
             // output as dist/index.html
-            filename: 'contacts.html',
+            filename: 'contacts/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'contacts']
         },
         'how-to-become-a-developer': {
@@ -87,7 +87,7 @@ module.exports = {
             // the source template
             template: 'public/how-to-become-a-developer.html',
             // output as dist/index.html
-            filename: 'how-to-become-a-developer.html',
+            filename: 'how-to-become-a-developer/index.html',
             chunks: ['chunk-vendors', 'chunk-common', 'how-to-become-a-developer']
         }
     }
