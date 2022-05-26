@@ -1,7 +1,6 @@
 <template lang="pug">
     li
-        img(:src="require(`../assets/${imgDesktop}`)").example__img.example__img--desktop
-        img(:src="require(`../assets/${imgMobile}`)").example__img.example__img--mobile
+        img(:src="require(`../assets/${currentImage}`)").example__img
         p.example__description {{text}}
 </template>
 
@@ -19,7 +18,24 @@
                 type: String,
                 required: true,
             },
-        }
+        },
+        data() {
+            return {
+                currentImage: ''
+            }
+        },
+        methods: {
+            onResize() {
+                this.currentImage = window.innerWidth > 500 ? this.imgDesktop : this.imgMobile;
+            }
+        },
+        created() {
+            this.onResize();
+            window.addEventListener('resize', this.onResize)
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.onResize)
+        },
     }
 </script>
 
@@ -33,14 +49,6 @@
         margin: 0 auto 40px;
     }
 
-    .example__img--mobile {
-        display: none;
-    }
-
-    .example__img--desktop {
-        display: block;
-    }
-
     .example__description {
         text-align: center;
     }
@@ -49,14 +57,6 @@
 
         .example__img {
             width: 250px;
-        }
-
-        .example__img--desktop {
-            display: none;
-        }
-
-        .example__img--mobile {
-            display: block;
         }
     }
 
