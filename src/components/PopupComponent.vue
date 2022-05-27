@@ -2,14 +2,19 @@
     div.popup__container
         div.popup
             button.popup__btn-close(@click="$emit('close-popup')")
-            form-component
+            FormComponent(:page="page")
 </template>
 
 <script>
     import FormComponent from "./FormComponent";
 
     export default {
-        name: 'popup-component',
+        name: 'PopupComponent',
+        props: {
+            page: {
+                type: String,
+            },
+        },
         components: {
             FormComponent
         }

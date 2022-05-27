@@ -20,6 +20,9 @@
         name: 'FormComponent',
         components: {ButtonTransparent},
         props: {
+            page: {
+                type: String,
+            }
         },
         data() {
             return {
@@ -44,7 +47,8 @@
                         body: JSON.stringify({
                             name: this.name,
                             phone: this.tel,
-                            email: this.email
+                            email: this.email,
+                            page: this.page
                         })
                     }).then((res) => {
                         if (res.status === 200) {

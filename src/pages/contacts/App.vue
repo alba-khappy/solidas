@@ -8,7 +8,7 @@
                 div.contacts__description
                     p.contacts__text Остались вопросы?
                     p.contacts__text Заполните форму и мы свяжемся с вами в ближайшее время.
-                FormComponent
+                FormComponent(:page="'contacts'")
                 p.contacts__brief-info(v-show="false") Если у вас уже есть понимание, что за продукт вы хотели бы получить, заполните бриф первичной информации.
                 span.contacts__brief-link(v-show="false") Заполнить бриф
 

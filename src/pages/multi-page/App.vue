@@ -14,7 +14,7 @@
                     :content = "example")
                 div.additional-page__btn-order
                     button-transparent(:text = "'Заказать'", @button-click="noScroll").additional-page__btn-order--position
-                PopupComponent(v-show="popup", @close-popup="noScroll")
+                PopupComponent(v-show="popup", :page="'multipage'", @close-popup="noScroll")
                 FooterComponent
 </template>
 
