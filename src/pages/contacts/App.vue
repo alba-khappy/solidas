@@ -64,9 +64,6 @@ export default {
     .contacts-page__container {
         display: grid;
         grid-template-rows: repeat(2, auto);
-        padding: 50px 140px 0;
-        background: transparent url("../../assets/contacts-header-bg-d.png") no-repeat top right;
-        background-size: 30%;
     }
 
     .h2__contacts-page--primary {
@@ -85,15 +82,21 @@ export default {
         margin-bottom: 300px;
     }
 
+    @media (min-width: 901px) {
+
+        .contacts-page__container {
+            background: transparent url("../../assets/contacts-header-bg-d.png") no-repeat top right;
+            padding: 50px 140px 0;
+            background-size: 30%;
+        }
+    }
+
     @media (max-width: 900px) {
 
         .contacts-page__container {
             background-image: url("../../assets/contacts-header-bg-m.png");
             background-size: 60%;
             background-position: top center;
-        }
-
-        .contacts-page__container {
             padding: 70px 20px 0;
         }
 

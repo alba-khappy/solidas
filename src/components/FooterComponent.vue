@@ -66,7 +66,7 @@
         }
 
         .page-footer__link {
-            font-size: 10px;
+            font-size: 14px;
         }
 
         .page-footer__mail {
