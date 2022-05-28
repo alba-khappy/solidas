@@ -14,10 +14,10 @@
                 ul.about-page--team-list
                     li.h3__about-page--team-item Начала свое формирование в 2019 году;
                     li.h3__about-page--team-item Участники работали над проектами крупнейших банков, трэвел агентств и маркетплейсов;
-                    li.h3__about-page--team-item Разработчики имеют опыт работы в Европе, США, Японии, Бразилии и других странах мира;
+                    li.h3__about-page--team-item Разработчики имеют опыт работы в Европе, США, Японии, Аргентины и других странах мира;
                 h3.h3--about-page Наши технологии
                 ul.about-page__technologies-list
-                    Technologies(v-for = "technologies in technologiesList",
+                    Technologies(v-for = "technologies in technologiesList", :key="technologies.img1"
                         :img1 = "technologies.img1",
                         :img2 = "technologies.img2",
                         :img3 = "technologies.img3",
