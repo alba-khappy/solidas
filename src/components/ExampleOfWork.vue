@@ -1,11 +1,8 @@
 <template lang="pug">
     div.examples__wrapper(:class="{'examples__wrapper--mobile-images': marginLeft}")
-        ul.examples__list.examples__list--desktop
-            li.examples__item(v-for="workImageDesktop in workImagesDesktop")
-                img(:src="require(`../assets/${workImageDesktop}`)").examples__img
-        ul.examples__list.examples__list--mobile
-            li.examples__item(v-for="workImageMobile in workImagesMobile")
-                img(:src="require(`../assets/${workImageMobile}`)").examples__img
+        ul.examples__list
+            li.examples__item(v-for="workImage in workImages")
+                img(:src="require(`../assets/${workImage}`)").examples__img
         div.examples__work-description-wrapper
             p.examples__work-description {{text}}
             a(:href="'https://' + link", v-if="link").examples__work-link {{link}}
@@ -16,10 +13,7 @@
     export default {
         name: 'ExampleOfWork',
         props: {
-            workImagesDesktop: {
-                type: Array,
-            },
-            workImagesMobile: {
+            workImages: {
                 type: Array,
             },
             text: {
@@ -51,15 +45,8 @@
         margin-left: 20px;
     }
 
-    .examples__list--mobile {
-        display: none;
-    }
-
-    .examples__list--desktop {
-        display: flex;
-    }
-
     .examples__list {
+        display: flex;
         margin: 0 auto;
         padding-bottom: 30px;
         justify-content: center;
@@ -111,16 +98,6 @@
         }
     }
 
-    @media (max-width: 900px) {
-
-        .examples__list--desktop {
-            display: none;
-        }
-
-        .examples__list--mobile {
-            display: flex;
-        }
-    }
 
 
 

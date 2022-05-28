@@ -120,14 +120,14 @@
     beforeDestroy() {
         window.removeEventListener('resize', this.onResize)
     },
-        components: {
-            FormComponent,
-            ButtonTransparent,
-            MainPageExample,
-            MainPageOffer,
-            FooterComponent,
-            HeaderComponent
-        }
+    components: {
+        FormComponent,
+        ButtonTransparent,
+        MainPageExample,
+        MainPageOffer,
+        FooterComponent,
+        HeaderComponent
+    }
     }
 </script>
 

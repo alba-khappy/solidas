@@ -6,8 +6,7 @@
                 h2.h2.h2--secondary Works examples
                 h2.h2.h2--primary.h2__examples-page--primary Примеры работ
                 ExampleOfWork(v-for="exampleItem in exampleList",
-                                :workImagesDesktop="exampleItem.workImagesDesktop",
-                                :workImagesMobile="exampleItem.workImagesMobile",
+                                :workImages="isMobile ? exampleItem.workImagesMobile : exampleItem.workImagesDesktop",
                                 :text="exampleItem.text",
                                 :link="exampleItem.link",
                                 :marginLeft="exampleItem.marginLeft")
@@ -23,6 +22,7 @@
         name: 'Examples',
         data() {
             return {
+                isMobile: true,
                 exampleList: [
                     {
                         workImagesDesktop: ["example2.1.d.png", "example2.2.d.png", "example2.3.d.png", "example2.4.d.png"],
@@ -82,6 +82,18 @@
             ExampleOfWork,
             FooterComponent,
             HeaderComponent
+        },
+        methods: {
+            onResize() {
+                this.isMobile = window.innerWidth <= 900;
+            }
+        },
+        created() {
+            this.onResize();
+            window.addEventListener('resize', this.onResize)
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.onResize)
         },
     }
 </script>
