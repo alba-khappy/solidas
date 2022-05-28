@@ -1,6 +1,6 @@
 <template lang="pug">
     li
-        img(:src="require(`../assets/${currentImage}`)").example__img
+        img(:src="require(`../assets/${img}`)").example__img
         p.example__description {{text}}
 </template>
 
@@ -8,34 +8,14 @@
     export default {
         name: 'MainPageExample',
         props: {
-            imgDesktop: {
-                type: String,
-            },
-            imgMobile: {
+            img: {
                 type: String,
             },
             text: {
                 type: String,
                 required: true,
             },
-        },
-        data() {
-            return {
-                currentImage: ''
-            }
-        },
-        methods: {
-            onResize() {
-                this.currentImage = window.innerWidth > 500 ? this.imgDesktop : this.imgMobile;
-            }
-        },
-        created() {
-            this.onResize();
-            window.addEventListener('resize', this.onResize)
-        },
-        beforeDestroy() {
-            window.removeEventListener('resize', this.onResize)
-        },
+        }
     }
 </script>
 

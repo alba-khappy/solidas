@@ -27,8 +27,7 @@
                 ul.examples__list
                     MainPageExample(v-for = "example in examples",
                         :text = "example.text",
-                        :imgDesktop = "example.imgDesktop",
-                        :imgMobile = "example.imgMobile")
+                        :img = "isMobile ? example.imgMobile : example.imgDesktop")
                     li.example__btn
                         ButtonTransparent(:address = "examplesBtn.address", :text = "examplesBtn.text").section-examples__btn-order--position
 
@@ -58,6 +57,7 @@
         name: 'Home',
         data() {
             return {
+                isMobile: true,
                 offersBtn: {
                     address: "/prices/",
                     text: "Сравнить",
@@ -108,6 +108,18 @@
                 ]
             }
         },
+    methods: {
+        onResize() {
+            this.isMobile = window.innerWidth <= 500;
+        }
+    },
+    created() {
+        this.onResize();
+        window.addEventListener('resize', this.onResize)
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.onResize)
+    },
         components: {
             FormComponent,
             ButtonTransparent,
