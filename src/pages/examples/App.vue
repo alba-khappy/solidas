@@ -124,6 +124,7 @@
         padding: 50px 100px 0;
         background: transparent url("../../assets/examples-header-bg-d.png") no-repeat top right;
         background-size: 40%;
+        max-width: 1500px;
     }
 
     .h2__examples-page--primary {

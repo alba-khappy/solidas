@@ -144,6 +144,7 @@ export default {
         padding: 50px 140px 0;
         background: transparent url("../../assets/about-header-bg-d.png") no-repeat top right;
         background-size: 30%;
+        max-width: 1500px;
     }
 
     .h2__about-page--primary {

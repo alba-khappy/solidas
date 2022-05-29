@@ -64,6 +64,7 @@ export default {
     .contacts-page__container {
         display: grid;
         grid-template-rows: repeat(2, auto);
+        max-width: 1500px;
     }
 
     .h2__contacts-page--primary {
